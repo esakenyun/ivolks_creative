@@ -111,7 +111,7 @@ export default function AboutPage() {
           alt="Background Contact"
           priority
         />
-        <div className="absolute inset-0 text-white flex justify-center w-full items-center">
+        <div className="absolute inset-0 text-white flex w-full items-center px-[7%]">
           <div className="flex flex-col lg:gap-4 text-center md:text-left">
             <h1 className="font-bold text-base lg:text-4xl uppercase">
               We Provide All The <span className="text-2xl lg:text-5xl text-primary-red">Creative</span> Needs
