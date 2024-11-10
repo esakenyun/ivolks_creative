@@ -1,6 +1,8 @@
 import { FaArrowUp } from "react-icons/fa6";
 import NavbarAnother from "../navigation/NavbarAnother";
 import Client from "../section/Client";
+import Image from "next/image";
+import ContactBottom from "../section/ContactBottom";
 
 export default function AboutPageComponent() {
   return (
