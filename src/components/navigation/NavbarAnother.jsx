@@ -11,7 +11,7 @@ export default function NavbarAnother() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full transition-all duration-300 z-50 bg-white">
+    <header className="fixed top-0 w-full transition-all duration-300 z-20 bg-white">
       <nav className="px-[3%] py-5">
         <div className="flex justify-between items-center">
           <Link href={"/"}>
@@ -26,8 +26,8 @@ export default function NavbarAnother() {
             {[
               { title: "Home", href: "/" },
               { title: "Works", href: "/works" },
-              { title: "About", href: "/about" },
               { title: "Contact", href: "/contact" },
+              { title: "About", href: "/about" },
             ].map((item, index) => (
               <Link key={index} href={item.href} className={`text-lg font-bold uppercase cursor-pointer ${pathname === item.href ? "text-primary-red" : "text-gray-500"} hover:text-primary-red`}>
                 {item.title}

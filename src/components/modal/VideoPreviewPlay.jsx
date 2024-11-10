@@ -26,7 +26,7 @@ export default function VideoPreviewPlay({ isOpen, onClose, item }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center h-screen">
+    <div className="fixed inset-0 bg-black bg-opacity-80 z-[1000] flex justify-center items-center h-screen">
       <div ref={modalRef} className="relative w-[90%] md:w-[75%] lg:w-[60%] p-4">
         <div className="flex justify-between">
           <p className="text-white text-xl font-semibold uppercase">{item.title}</p>
