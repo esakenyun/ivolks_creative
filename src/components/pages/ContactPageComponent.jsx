@@ -19,7 +19,7 @@ export default function ContactPageComponent({ props }) {
       {/* Contact US */}
       <div className="py-[8%] px-[5%] md:py-[5%] md:px-[3%] grid lg:grid-cols-2 gap-10 lg:gap-20">
         <div>
-          <p className="italic font-medium text-5xl">Let's Talks</p>
+          <p className="italic font-medium text-5xl">Let&apos;s Talks</p>
           <p className="italic font-medium text-5xl">if you are interested in us</p>
         </div>
         <form action="#">
