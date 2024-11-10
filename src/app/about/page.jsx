@@ -20,7 +20,7 @@ export default function AboutPage() {
     {
       name: "Erik Ferdian",
       position: "Founder",
-      imageUrl: "/people/Erik Ferdian.jpg",
+      imageUrl: "/people/Erik Ferdian.JPG",
     },
     {
       name: "Riefian Fajarsyah",
