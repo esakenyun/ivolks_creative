@@ -10,7 +10,7 @@ export default function HomePageComponent() {
   };
   return (
     <div>
-      <video className="w-full h-screen object-cover" autoPlay loop muted>
+      <video className="w-full h-screen object-cover" autoPlay loop muted playsInline>
         <source src={"videos/video_hero.mp4"} />
       </video>
       <motion.div initial="hidden" animate={{ opacity, y: 0 }} variants={variants} transition={{ duration: 0.5 }} className="absolute top-0 w-full h-full flex flex-col justify-center items-center md:gap-[10%] lg:gap-[25%]">
