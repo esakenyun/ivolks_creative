@@ -86,7 +86,7 @@ export default function ContactPageComponent({ props }) {
         <div className="flex flex-col gap-5">
           <p className="text-2xl md:text-4xl font-bold border-b-2 pb-[2%]">Our Location</p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32658977.91642012!2d95.93264817641113!3d-2.268460203169689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4dc115d1783c335d%3A0x47abee73ac8c2b7d!2siVolks%20Creative!5e0!3m2!1sen!2sid!4v1730432119913!5m2!1sen!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.929578006197!2d106.81463579999999!3d-6.272990699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1002a2221c5%3A0x1e8a23c450e198da!2sIVolks%20Creative!5e0!3m2!1sen!2sid!4v1731285493707!5m2!1sen!2sid"
             width="600"
             height="450"
             allowFullScreen
