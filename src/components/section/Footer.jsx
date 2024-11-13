@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex flex-col gap-1.5 w-full">
             <p className="text-xl font-bold">New Business</p>
             <p>contact@ivolkscreative.com</p>
-            <p>+62 123 4567 8910</p>
+            <p>(+62) 851 6157 8045</p>
           </div>
           <div className="flex flex-col gap-1.5 w-full">
             <p className="text-xl font-bold">Explore</p>
@@ -18,8 +18,8 @@ export default function Footer() {
             <a href="/about" className="text-sm">
               About
             </a>
-            <a href="/works" className="text-sm">
-              Works
+            <a href="/services" className="text-sm">
+              Services
             </a>
             <a href="/contact" className="text-sm">
               Contact
@@ -30,10 +30,6 @@ export default function Footer() {
             <a href="https://www.instagram.com/ivolks_creative/" target="_blank" className="flex items-center gap-1 cursor-pointer">
               <FaInstagram />
               <p className="text-sm">Instagram</p>
-            </a>
-            <a href="/" target="_blank" className="flex items-center gap-1 cursor-pointer">
-              <FaLinkedin />
-              <p className="text-sm">Linkedin</p>
             </a>
           </div>
           <div className="w-3/4">

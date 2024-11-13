@@ -16,7 +16,7 @@ export default function NavbarMobile({ isOpen, onClose }) {
       leaveFrom="translate-x-0"
       leaveTo="-translate-x-full">
       <div className="fixed inset-0 z-50">
-        <div className="bg-gradient-to-bl from-yellow-400 via-blue-500 to-blue-900 w-full h-full px-[4%] py-[7%] overflow-auto text-white" onClick={(e) => e.stopPropagation()}>
+        <div className="bg-primary-white w-full h-full px-[4%] py-[7%] overflow-auto text-black" onClick={(e) => e.stopPropagation()}>
           <div className="flex justify-between items-center">
             <p className="text-3xl font-semibold">Menu</p>
             <RxCross2 onClick={onClose} className="text-4xl cursor-pointer" />
@@ -30,7 +30,7 @@ export default function NavbarMobile({ isOpen, onClose }) {
                 <Link href="/about">About</Link>
               </li>
               <li>
-                <Link href="/works">Works</Link>
+                <Link href="/services">Services</Link>
               </li>
               <li>
                 <Link href="/contact">Contact</Link>
@@ -38,7 +38,7 @@ export default function NavbarMobile({ isOpen, onClose }) {
             </ul>
           </nav>
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-            <Image src="/logo/logo_white.png" alt="Ivolks Creative" width={100} height={100} className="w-auto h-auto" priority />
+            <Image src="/logo/logo_black.png" alt="Ivolks Creative" width={100} height={100} className="w-auto h-auto" priority />
           </div>
         </div>
       </div>

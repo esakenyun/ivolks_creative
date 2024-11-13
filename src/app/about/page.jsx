@@ -3,29 +3,51 @@ import NavbarAnother from "@/components/navigation/NavbarAnother";
 import ContactBottom from "@/components/section/ContactBottom";
 import Footer from "@/components/section/Footer";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa6";
-import { PiVideoBold } from "react-icons/pi";
-import { FcPhotoReel } from "react-icons/fc";
-import { TfiLayoutMediaCenterAlt } from "react-icons/tfi";
-import { FaWarehouse } from "react-icons/fa";
 
 export default function AboutPage() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY > 500);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    const scrollStep = -window.scrollY / (500 / 15);
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 20);
+  };
+
   const founders = [
     {
       name: "Dr. Satrio Pamungkas, S.Sn.,M.Sn.",
       position: "Founder",
       imageUrl: "/people/Satrio Pamungkas.jpg",
+      instagramUrl: "https://www.instagram.com/satriopepo/",
     },
     {
       name: "Erik Ferdian",
       position: "Founder",
       imageUrl: "/people/Erik Ferdian.JPG",
+      instagramUrl: "https://www.instagram.com/erfr/",
     },
     {
       name: "Riefian Fajarsyah",
       position: "CO-Founder",
       imageUrl: "/people/Riefian Fajarsyah01.jpg",
+      instagramUrl: "https://www.instagram.com/ifanseventeen.info/",
     },
   ];
 
@@ -34,11 +56,13 @@ export default function AboutPage() {
       name: "Ahmad Pippo",
       position: "Project Manager",
       imageUrl: "/people/Ahmad Pippo.JPG",
+      instagramUrl: "https://www.instagram.com/sam.pipps/",
     },
     {
       name: "Asep Lukmanul",
       position: "Visual Supervisor",
       imageUrl: "/people/Asep Lukmanul.JPG",
+      instagramUrl: "https://www.instagram.com/xeesixee/",
     },
   ];
 
@@ -68,19 +92,6 @@ export default function AboutPage() {
       imageUrl: "/people/Ahmad Pippo.JPG",
     },
   ];
-
-  const [scrolling, setScrolling] = useState(false);
-
-  const scrollToTop = () => {
-    const scrollStep = -window.scrollY / (500 / 15);
-    const scrollInterval = setInterval(() => {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
-      } else {
-        clearInterval(scrollInterval);
-      }
-    }, 20);
-  };
 
   return (
     <>
@@ -112,20 +123,18 @@ export default function AboutPage() {
           </div>
 
           {/* Our Services*/}
-          <div className="py-[7%] px-[5%]">
+          {/* <div className="py-[7%] px-[5%]">
             <h2 className="text-3xl font-bold mb-4 text-center">Our Services</h2>
             <div className="flex md:justify-center md:py-[10%]">
               <div className="w-full max-w-4xl">
                 <div className="flex flex-col md:flex-row items-center md:justify-between">
                   <div className="relative flex flex-col items-center mb-8 md:mb-0 group">
-                    {/* Icon yang akan menjadi area hover */}
                     <div className="flex items-center justify-center w-10 h-10 bg-primary-grey rounded-full mb-2 md:mb-0 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
                       <PiVideoBold />
                     </div>
-                    {/* Teks yang ada di bawah ikon */}
+
                     <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Video Production</div>
 
-                    {/* Dropdown content */}
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-48 bg-white shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out z-10 hidden group-hover:block">
                       <ul>
                         <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Film</li>
@@ -162,16 +171,18 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* Our Teams iVolks Section */}
-          <div className="py-[4%] px-[5%]">
+          <div className="py-[7%] px-[5%]">
             <h2 className="text-3xl font-bold mb-4">iVOLKS Leader</h2>
             <div className="pt-[2%] flex gap-3">
               <div className="overflow-x-auto w-full py-4">
                 <div className="flex space-x-10">
                   {founders.map((person, index) => (
                     <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
-                      <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                      <a href={person.instagramUrl} target="_blank">
+                        <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                      </a>
                       <div className="text-center mt-2">
                         <p className="font-semibold">{person.name}</p>
                         <p>{person.position}</p>
@@ -189,7 +200,9 @@ export default function AboutPage() {
                 <div className="flex space-x-10">
                   {teams.map((person, index) => (
                     <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
-                      <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                      <a href={person.instagramUrl} target="_blank">
+                        <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                      </a>
                       <div className="text-center mt-2">
                         <p className="font-semibold">{person.name}</p>
                         <p>{person.position}</p>

@@ -1,5 +1,5 @@
 import NavbarAnother from "../navigation/NavbarAnother";
-import { IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { AiOutlinePhone } from "react-icons/ai";
 import { FaArrowUp } from "react-icons/fa6";
 import ContactBottom from "../section/ContactBottom";
@@ -79,9 +79,13 @@ export default function ContactPageComponent({ props }) {
             </p>
           </div>
           <div className="flex items-center gap-10">
+            <IoMailOutline className="text-3xl" />
+            <p>contact@ivolkscreative.com</p>
+          </div>
+          <a className="flex items-center gap-10">
             <AiOutlinePhone className="text-3xl" />
             <p>(+62) 851 6157 8045 (Ahmad Pippo)</p>
-          </div>
+          </a>
         </div>
         <div className="flex flex-col gap-5">
           <p className="text-2xl md:text-4xl font-bold border-b-2 pb-[2%]">Our Location</p>

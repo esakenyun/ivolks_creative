@@ -17,14 +17,14 @@ export default function HomePageComponent() {
         <Image src={"/logo/logo_v_black.png"} className="w-[45%] md:w-[30%] lg:w-auto h-auto select-none" width={300} height={300} priority alt="Logo" />
         <div className="">
           <div className="flex flex-col md:flex-row gap-20 lg:gap-40 pt-3">
-            <Link href={"/works"}>
-              <button className="font-semibold uppercase py-1 px-6 md:px-5 text-white border-2 border-white hover:bg-white hover:text-primary-black text-sm">Works</button>
+            <Link href={"/about"}>
+              <button className="font-semibold uppercase py-1 px-8 md:px-6 text-white border-2 border-white hover:bg-white hover:text-primary-black text-sm">About</button>
+            </Link>
+            <Link href={"/services"}>
+              <button className="font-semibold uppercase py-1 px-6 md:px-5 text-white border-2 border-white hover:bg-white hover:text-primary-black text-sm">Services</button>
             </Link>
             <Link href={"/contact"}>
-              <button className="font-semibold uppercase py-1 px-5 md:px-5 text-white border-2 border-white hover:bg-white hover:text-primary-black text-sm">Contact</button>
-            </Link>
-            <Link href={"/about"}>
-              <button className="font-semibold uppercase py-1 px-8 md:px-5 text-white border-2 border-white hover:bg-white hover:text-primary-black text-sm">About</button>
+              <button className="font-semibold uppercase py-1 px-6 md:px-5 text-white border-2 border-white hover:bg-white hover:text-primary-black text-sm">Contact</button>
             </Link>
           </div>
         </div>

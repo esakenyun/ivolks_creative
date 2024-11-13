@@ -25,7 +25,7 @@ export default function NavbarAnother() {
           <div className="hidden md:flex items-center space-x-4">
             {[
               { title: "Home", href: "/" },
-              { title: "Works", href: "/works" },
+              { title: "Services", href: "/services" },
               { title: "Contact", href: "/contact" },
               { title: "About", href: "/about" },
             ].map((item, index) => (

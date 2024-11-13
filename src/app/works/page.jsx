@@ -61,7 +61,7 @@ export default function WorksPage() {
 
   return (
     <>
-      <main className="flex flex-col h-screen">
+      <main className="flex flex-col min-h-screen">
         <div>
           <NavbarAnother />
           <div className="pt-20">
@@ -79,17 +79,13 @@ export default function WorksPage() {
                 <div className="md:hidden">
                   <div className="grid grid-cols-2 gap-4 px-2">
                     {visibleDataMobile.map((item) => (
-                      <div
-                        key={item.id}
-                        className="h-[18vw] relative block group overflow-hidden cursor-pointer rounded-lg bg-gray-900"
-                        onClick={() => openModal(item)} // Open modal on click
-                      >
+                      <div key={item.id} className="h-[18vw] relative block group overflow-hidden cursor-pointer rounded-lg bg-gray-900" onClick={() => openModal(item)}>
                         <div className="relative w-full h-full">
                           {/* Show video iframe on hover */}
                           <div className="absolute inset-0 w-full h-full group-hover:block hidden">
                             <iframe
                               className="absolute inset-0 w-full h-full object-cover"
-                              src={`${item.link}&autoplay=1&mute=1`} // Autoplay and mute
+                              src={`${item.link}&autoplay=1&mute=1`}
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture muted"
                               allowFullScreen
                               title="Video Preview"></iframe>
@@ -105,6 +101,7 @@ export default function WorksPage() {
                             <div className="mt-[40%]">
                               <div className="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
                                 <h2 className="text-xs lg:text-lg font-bold z-10 text-left uppercase text-white">{item.title}</h2>
+                                <h2 className="text-xs lg:text-lg font-bold z-10 text-left uppercase text-white">{item.category}</h2>
                               </div>
                             </div>
                           </div>
@@ -151,6 +148,7 @@ export default function WorksPage() {
                             <div className="mt-[40%]">
                               <div className="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
                                 <h2 className="text-xs lg:text-lg font-bold z-10 text-left uppercase text-white">{item.title}</h2>
+                                <h2 className="text-xs lg:text-lg z-10 text-left text-white italic">{item.category}</h2>
                               </div>
                             </div>
                           </div>
