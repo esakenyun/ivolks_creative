@@ -74,7 +74,7 @@ export default function WorksPage() {
                 <div className="md:hidden">
                   <div className="grid grid-cols-2 gap-4 px-2">
                     {visibleDataMobile.map((item) => (
-                      <div key={item.id} className="h-[25vw] relative block group overflow-hidden cursor-pointer rounded-lg bg-gray-900" onClick={() => openModal(item)}>
+                      <div key={item.id} className="h-[30vw] relative block group overflow-hidden cursor-pointer rounded-lg bg-gray-900" onClick={() => openModal(item)}>
                         <div className="relative w-full h-full">
                           {/* Show video iframe on hover */}
                           <div className="absolute inset-0 w-full h-full group-hover:block hidden">
@@ -95,8 +95,8 @@ export default function WorksPage() {
                           <div className="relative p-5">
                             <div className="mt-[40%]">
                               <div className="transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
-                                <h2 className="text-xs lg:text-lg font-bold z-10 text-left uppercase text-white">{item.title}</h2>
-                                <h2 className="text-xs lg:text-lg font-bold z-10 text-left uppercase text-white">{item.category}</h2>
+                                <h2 className="text-[10px] lg:text-lg font-bold z-10 text-left uppercase text-white">{item.title}</h2>
+                                <h2 className="text-[10px] lg:text-lg font-bold z-10 text-left uppercase text-white">{item.category}</h2>
                               </div>
                             </div>
                           </div>
