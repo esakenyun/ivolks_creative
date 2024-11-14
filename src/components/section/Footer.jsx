@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="flex justify-between">
           <div className="flex flex-col gap-1.5 w-full">
             <p className="text-xl font-bold">New Business</p>
-            <p>contact@ivolkscreative.com</p>
-            <p>(+62) 851 6157 8045</p>
+            <p>ivolkscreative@gmail.com</p>
+            <p>(+62)-851-6157-8045 (Ahmad Pippo)</p>
           </div>
           <div className="flex flex-col gap-1.5 w-full">
             <p className="text-xl font-bold">Explore</p>
@@ -32,13 +32,13 @@ export default function Footer() {
               <p className="text-sm">Instagram</p>
             </a>
           </div>
-          <div className="w-3/4">
+          {/* <div className="w-3/4">
             <p className="text-xl font-bold">Production House Ivolks Creative HQ</p>
             <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aliquam iste ipsa, eligendi commodi aspernatur?</p>
-          </div>
+          </div> */}
         </div>
       </div>
-      <p className="pt-[3%] uppercase font-bold text-sm">Copyright © 2024 - PT Ivolks Creative Indonesia | All Rights Reserved</p>
+      <p className="pt-[3%] uppercase font-bold text-sm">Copyright © 2024 - PT SINERGI IMAJI EKSPRESI | All Rights Reserved</p>
     </div>
   );
 }

@@ -8,27 +8,8 @@ import { FaArrowUp } from "react-icons/fa6";
 
 export default function AboutPage() {
   const [scrolling, setScrolling] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolling(window.scrollY > 500);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    const scrollStep = -window.scrollY / (500 / 15);
-    const scrollInterval = setInterval(() => {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
-      } else {
-        clearInterval(scrollInterval);
-      }
-    }, 20);
-  };
+  const [visibleCountTab, setVisibleCountTab] = useState(4);
+  const [visibleCountMobile, setVisibleCountMobile] = useState(3);
 
   const founders = [
     {
@@ -69,33 +50,73 @@ export default function AboutPage() {
   const internships = [
     {
       name: "Alia Eka Putri",
-      imageUrl: "/people/Ahmad Pippo.JPG",
+      imageUrl: "/people/Alia Eka Putri.jpg",
+      instagramUrl: "https://www.instagram.com/2992pm/",
     },
     {
-      name: "Jonathan Mepal J",
-      imageUrl: "/people/Ahmad Pippo.JPG",
+      name: "Jonathan Mepal Jeffry Napitulu",
+      imageUrl: "/people/Jonathan Mepal Jefry Napitupulu.jpg",
+      instagramUrl: "https://www.instagram.com/jonathan_napitupulu_/",
     },
     {
-      name: "Muhammad Rifqi P",
-      imageUrl: "/people/Ahmad Pippo.JPG",
+      name: "Muhammad Rifqi Prayoga Rusli",
+      imageUrl: "/people/Muhammad Rifqi Prayoga Rusli.jpg",
+      instagramUrl: "https://www.instagram.com/rifqiyoga_/)",
     },
     {
       name: "Marsya Haliza Syafei",
-      imageUrl: "/people/Ahmad Pippo.JPG",
+      imageUrl: "/people/Marsya Haliza Syafei.jpg",
+      instagramUrl: "https://www.instagram.com/marsyahlzsf/",
     },
     {
       name: "Sitatun Attoyibah",
-      imageUrl: "/people/Ahmad Pippo.JPG",
+      imageUrl: "/people/Sitatun Attoyibah.jpg",
+      instagramUrl: "https://www.instagram.com/ssttorii/",
     },
     {
       name: "Tharsius Celviano Ully",
-      imageUrl: "/people/Ahmad Pippo.JPG",
+      imageUrl: "/people/Tharsius Celviano Ully.jpg",
+      instagramUrl: "https://www.instagram.com/tharsiuscelviano29/",
+    },
+    {
+      name: "Zidan Verdian Windoe",
+      imageUrl: "/people/Zidan Verdian Windoe.jpg",
+      instagramUrl: "https://www.instagram.com/zidanwindoe/",
     },
   ];
 
+  const loadMoreTab = () => {
+    setVisibleCountTab((prevCount) => prevCount + 4);
+  };
+
+  const loadMoreMobile = () => {
+    setVisibleCountMobile((prevCount) => prevCount + 4);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY > 500);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    const scrollStep = -window.scrollY / (500 / 15);
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 20);
+  };
+
   return (
     <>
-      <main className="flex flex-col h-screen">
+      <main className="flex flex-col min-h-screen">
         <div>
           <NavbarAnother />
           <div className="px-[5%] pt-[25%] md:pt-[20%] lg:pt-[11%]">
@@ -115,100 +136,132 @@ export default function AboutPage() {
                 <p className="font-bold py-[2%] text-xl lg:text-2xl">We turn concepts into reality, ready to tackle all your creative needs from idea inception to production</p>
                 <p className="text-left md:text-sm lg:text-base">
                   iVOLKS Creative is a creative house based in Jakarta, Indonesia. Our team of passionate creatives specializes in crafting visually stories through <span className="font-bold">Video Production</span> (film, TVC, DVC, Music
-                  video, company profile, motion graphic and animation, documentary), <span className="font-bold">Photography</span>, <span className="font-bold">Media Promotion</span>, <span className="font-bold">Event Organizer</span> and
+                  video, company profile, motion graphic and animation, documentary), <span className="font-bold">Photography</span>, <span className="font-bold">Creative Media Plan</span>, <span className="font-bold">Post House</span> and
                   more. Let us be you partner in unleashing the full potential of your vision and captivating your audience with uniqe and compelling narrative.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Our Services*/}
-          {/* <div className="py-[7%] px-[5%]">
-            <h2 className="text-3xl font-bold mb-4 text-center">Our Services</h2>
-            <div className="flex md:justify-center md:py-[10%]">
-              <div className="w-full max-w-4xl">
-                <div className="flex flex-col md:flex-row items-center md:justify-between">
-                  <div className="relative flex flex-col items-center mb-8 md:mb-0 group">
-                    <div className="flex items-center justify-center w-10 h-10 bg-primary-grey rounded-full mb-2 md:mb-0 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
-                      <PiVideoBold />
-                    </div>
-
-                    <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Video Production</div>
-
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-48 bg-white shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out z-10 hidden group-hover:block">
-                      <ul>
-                        <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Film</li>
-                        <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">TVC</li>
-                        <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">DVC</li>
-                        <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Music Video</li>
-                        <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Company Profile</li>
-                        <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Motion Graphics & Animation</li>
-                        <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Documentary</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="relative flex flex-col items-center mb-8 md:mb-0 group">
-                    <div className="flex items-center justify-center w-10 h-10 bg-primary-grey rounded-full mb-2 md:mb-0 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
-                      <FcPhotoReel />
-                    </div>
-                    <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Photography</div>
-                  </div>
-
-                  <div className="relative flex flex-col items-center mb-8 md:mb-0 group">
-                    <div className="flex items-center justify-center w-10 h-10 bg-primary-grey rounded-full mb-2 md:mb-0 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
-                      <TfiLayoutMediaCenterAlt />
-                    </div>
-                    <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Media Promotion</div>
-                  </div>
-
-                  <div className="relative flex flex-col items-center mb-8 md:mb-0 group">
-                    <div className="flex items-center justify-center w-10 h-10 bg-primary-grey rounded-full mb-2 md:mb-0 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
-                      <FaWarehouse />
-                    </div>
-                    <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Post House</div>
+          {/* Our Teams iVolks Section */}
+          <div className="py-[7%] px-[5%]">
+            <h2 className="text-3xl font-bold mb-4">iVOLKS Leader</h2>
+            {/* Dekstop Section */}
+            <div className="hidden lg:block">
+              <div className="pt-[2%] flex gap-3">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="flex space-x-10">
+                    {founders.map((person, index) => (
+                      <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                        <a href={person.instagramUrl} target="_blank">
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                        </a>
+                        <div className="text-center mt-2">
+                          <p className="font-semibold">{person.name}</p>
+                          <p>{person.position}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
-          </div> */}
-          {/* Our Teams iVolks Section */}
-          <div className="py-[7%] px-[5%]">
-            <h2 className="text-3xl font-bold mb-4">iVOLKS Leader</h2>
-            <div className="pt-[2%] flex gap-3">
-              <div className="overflow-x-auto w-full py-4">
-                <div className="flex space-x-10">
-                  {founders.map((person, index) => (
-                    <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
-                      <a href={person.instagramUrl} target="_blank">
-                        <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
-                      </a>
-                      <div className="text-center mt-2">
-                        <p className="font-semibold">{person.name}</p>
-                        <p>{person.position}</p>
-                      </div>
+            {/* Tablet Section */}
+            <div className="hidden md:block lg:hidden">
+              <div className="pt-[2%] flex gap-3">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="flex flex-col gap-4">
+                    <div className="flex w-full space-x-10">
+                      {founders.slice(0, 2).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                    <div className="flex w-full space-x-10">
+                      {founders.slice(2, 3).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Phone Section */}
+            <div className="md:hidden">
+              <div className="pt-[2%]">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="grid grid-cols-1 gap-4">
+                    {founders.map((person, index) => (
+                      <div key={index} className="flex-shrink-0 w-full select-none">
+                        <a href={person.instagramUrl} target="_blank">
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                        </a>
+                        <div className="text-center mt-2">
+                          <p className="font-semibold">{person.name}</p>
+                          <p>{person.position}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="px-[5%]">
             <h2 className="text-3xl font-bold mb-4">iVOLKS Team</h2>
-            <div className="pt-[2%] flex gap-3">
-              <div className="overflow-x-auto w-full py-4">
-                <div className="flex space-x-10">
-                  {teams.map((person, index) => (
-                    <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
-                      <a href={person.instagramUrl} target="_blank">
-                        <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
-                      </a>
-                      <div className="text-center mt-2">
-                        <p className="font-semibold">{person.name}</p>
-                        <p>{person.position}</p>
+            {/* Tablet and Dekstop Section */}
+            <div className="hidden md:block">
+              <div className="pt-[2%] flex gap-3">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="flex space-x-10">
+                    {teams.map((person, index) => (
+                      <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                        <a href={person.instagramUrl} target="_blank">
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                        </a>
+                        <div className="text-center mt-2">
+                          <p className="font-semibold">{person.name}</p>
+                          <p>{person.position}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Phone Section */}
+            <div className="md:hidden">
+              <div className="pt-[2%]">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="grid grid-cols-1 gap-4">
+                    {teams.map((person, index) => (
+                      <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                        <a href={person.instagramUrl} target="_blank">
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                        </a>
+                        <div className="text-center mt-2">
+                          <p className="font-semibold">{person.name}</p>
+                          <p>{person.position}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -216,36 +269,97 @@ export default function AboutPage() {
 
           <div className="py-[4%] px-[5%]">
             <h2 className="text-3xl font-bold mb-4">iVOLKS Internship</h2>
-            <div className="pt-[2%]">
-              <div className="overflow-x-auto w-full py-4">
-                <div className="flex space-x-10 md:hidden">
-                  {internships.map((person, index) => (
-                    <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
-                      <Image src={person.imageUrl} alt={person.name} className="w-full h-96 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
-                      <div className="text-center mt-2">
-                        <p className="font-semibold">{person.name}</p>
-                        <p>{person.position}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="hidden md:flex md:flex-col md:gap-4">
-                  <div className="flex w-full space-x-10">
-                    {internships.slice(0, 4).map((person, index) => (
-                      <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
-                        <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
-                        <div className="text-center mt-2">
-                          <p className="font-semibold">{person.name}</p>
-                          <p>{person.position}</p>
+            {/* Dekstop Section*/}
+            <div className="hidden lg:block">
+              <div className="pt-[2%]">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="hidden md:flex md:flex-col md:gap-4">
+                    <div className="flex w-full space-x-10">
+                      {internships.slice(0, 4).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships.slice(4, 7).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex w-full space-x-10">
-                    {internships.slice(4, 6).map((person, index) => (
-                      <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
-                        <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                </div>
+              </div>
+            </div>
+            {/* Tablet Section */}
+            <div className="hidden md:block lg:hidden">
+              <div className="pt-[2%]">
+                <div className="flex flex-col gap-4">
+                  {internships.slice(0, visibleCountTab).map((person, index) => {
+                    if (index % 2 === 0) {
+                      return (
+                        <div key={index} className="flex w-full space-x-10">
+                          <div className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                            <a href={person.instagramUrl} target="_blank">
+                              <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                            </a>
+                            <div className="text-center mt-2">
+                              <p className="font-semibold">{person.name}</p>
+                              <p>{person.position}</p>
+                            </div>
+                          </div>
+                          {/* Jika ada elemen kedua di grup yang sama */}
+                          {internships[index + 1] && (
+                            <div className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                              <a href={internships[index + 1].instagramUrl} target="_blank">
+                                <Image src={internships[index + 1].imageUrl} alt={internships[index + 1].name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                              </a>
+                              <div className="text-center mt-2">
+                                <p className="font-semibold">{internships[index + 1].name}</p>
+                                <p>{internships[index + 1].position}</p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+            </div>
+            {visibleCountTab < internships.length && (
+              <div className="hidden md:block lg:hidden">
+                <div className="flex justify-center py-10">
+                  <button onClick={loadMoreTab} className="px-4 py-2 text-white bg-primary-red rounded-md">
+                    Load More
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Phone Section */}
+            <div className=" md:hidden">
+              <div className="pt-[2%]">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="grid grid-cols-1 gap-4">
+                    {internships.slice(0, visibleCountMobile).map((person, index) => (
+                      <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                        <a href={person.instagramUrl} target="_blank">
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                        </a>
                         <div className="text-center mt-2">
                           <p className="font-semibold">{person.name}</p>
                           <p>{person.position}</p>
@@ -256,6 +370,15 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+            {visibleCountMobile < internships.length && (
+              <div className="md:hidden">
+                <div className="flex justify-center py-10">
+                  <button onClick={loadMoreMobile} className="px-4 py-2 text-white bg-primary-red rounded-md">
+                    Load More
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           <ContactBottom />

@@ -17,18 +17,15 @@ export default function WorksPage() {
   const [visibleCountMobile, setVisibleCountMobile] = useState(5);
   const [scrolling, setScrolling] = useState(false);
 
-  // Open modal when an item is clicked
   const openModal = (item) => {
     setSelectedItem(item);
     setModalOpen(true);
   };
 
-  // Filter data by category
   const filteredData = activeCategory === "All" ? data : data.filter((item) => item.category === activeCategory);
   const visibleDataMobile = filteredData.slice(0, visibleCountMobile);
   const visibleData = filteredData.slice(0, visibleCount);
 
-  // Load more items
   const loadMore = () => {
     setVisibleCount((prevCount) => prevCount + 3);
   };
@@ -36,7 +33,6 @@ export default function WorksPage() {
     setVisibleCountMobile((prevCount) => prevCount + 5);
   };
 
-  // Scroll handler
   useEffect(() => {
     const handleScroll = () => {
       setScrolling(window.scrollY > 500);
@@ -47,7 +43,6 @@ export default function WorksPage() {
     };
   }, []);
 
-  // Scroll to top functionality
   const scrollToTop = () => {
     const scrollStep = -window.scrollY / (500 / 15);
     const scrollInterval = setInterval(() => {
@@ -79,7 +74,7 @@ export default function WorksPage() {
                 <div className="md:hidden">
                   <div className="grid grid-cols-2 gap-4 px-2">
                     {visibleDataMobile.map((item) => (
-                      <div key={item.id} className="h-[18vw] relative block group overflow-hidden cursor-pointer rounded-lg bg-gray-900" onClick={() => openModal(item)}>
+                      <div key={item.id} className="h-[25vw] relative block group overflow-hidden cursor-pointer rounded-lg bg-gray-900" onClick={() => openModal(item)}>
                         <div className="relative w-full h-full">
                           {/* Show video iframe on hover */}
                           <div className="absolute inset-0 w-full h-full group-hover:block hidden">

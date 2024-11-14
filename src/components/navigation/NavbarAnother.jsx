@@ -25,9 +25,9 @@ export default function NavbarAnother() {
           <div className="hidden md:flex items-center space-x-4">
             {[
               { title: "Home", href: "/" },
+              { title: "About", href: "/about" },
               { title: "Services", href: "/services" },
               { title: "Contact", href: "/contact" },
-              { title: "About", href: "/about" },
             ].map((item, index) => (
               <Link key={index} href={item.href} className={`text-lg font-bold uppercase cursor-pointer ${pathname === item.href ? "text-primary-red" : "text-gray-500"} hover:text-primary-red`}>
                 {item.title}

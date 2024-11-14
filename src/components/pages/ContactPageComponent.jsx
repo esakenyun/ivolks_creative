@@ -79,13 +79,13 @@ export default function ContactPageComponent({ props }) {
             </p>
           </div>
           <div className="flex items-center gap-10">
-            <IoMailOutline className="text-3xl" />
-            <p>contact@ivolkscreative.com</p>
-          </div>
-          <a className="flex items-center gap-10">
             <AiOutlinePhone className="text-3xl" />
-            <p>(+62) 851 6157 8045 (Ahmad Pippo)</p>
-          </a>
+            <p>(+62)851-6157-8045 (Ahmad Pippo)</p>
+          </div>
+          <div className="flex items-center gap-10">
+            <IoMailOutline className="text-3xl" />
+            <p>ivolkscreative@gmail.com</p>
+          </div>
         </div>
         <div className="flex flex-col gap-5">
           <p className="text-2xl md:text-4xl font-bold border-b-2 pb-[2%]">Our Location</p>
