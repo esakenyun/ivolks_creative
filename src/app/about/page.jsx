@@ -28,7 +28,7 @@ export default function AboutPage() {
       name: "Riefian Fajarsyah",
       position: "CO-Founder",
       imageUrl: "/people/Riefian Fajarsyah01.jpg",
-      instagramUrl: "https://www.instagram.com/ifanseventeen.info/",
+      instagramUrl: "https://www.instagram.com/ifanseventeen/",
     },
   ];
 
