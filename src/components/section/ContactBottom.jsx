@@ -3,7 +3,7 @@ import { IoLogoWhatsapp } from "react-icons/io5";
 export default function ContactBottom() {
   return (
     <div className="fixed bottom-5 right-3">
-      <div className="``">
+      <div>
         <a href="https://wa.me/6285161578045" target="_blank">
           <div className="bg-primary-red rounded-full p-3 text-white z-50">
             <IoLogoWhatsapp className="text-4xl font-bold" />

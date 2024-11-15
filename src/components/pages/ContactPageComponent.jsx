@@ -5,8 +5,7 @@ import { FaArrowUp } from "react-icons/fa6";
 import ContactBottom from "../section/ContactBottom";
 
 export default function ContactPageComponent({ props }) {
-  const scrolling = props.scrolling;
-  const scrollToTop = props.scrollToTop;
+  const { scrolling, scrollToTop, purpose, formData, commentMessage, commentMessageRef, handleChange, handlePurposeChange, handleSubmit } = props;
 
   return (
     <div>
@@ -22,7 +21,7 @@ export default function ContactPageComponent({ props }) {
           <p className="italic font-medium text-5xl">Let&apos;s Talks</p>
           <p className="italic font-medium text-5xl">if you are interested in us</p>
         </div>
-        <form action="#">
+        <form action="#" onSubmit={handleSubmit}>
           <div>
             <div className="flex items-center gap-0.5">
               <p className="font-semibold">Name</p>
@@ -30,11 +29,11 @@ export default function ContactPageComponent({ props }) {
             </div>
             <div className="flex gap-5 w-full">
               <div className="flex flex-col md:w-full">
-                <input type="text" className="p-2 border border-gray-200 focus:border-gray-500 w-full" required />
+                <input type="text" id="firstName" name="firstName" className="p-2 border border-gray-200 focus:border-gray-500 w-full" value={formData.firstName} onChange={handleChange} required />
                 <p className="text-sm opacity-60">First</p>
               </div>
               <div className="flex flex-col md:w-full">
-                <input type="text" className="p-2 border border-gray-200 focus:border-gray-500 w-full" required />
+                <input type="text" id="lastName" name="lastName" className="p-2 border border-gray-200 focus:border-gray-500 w-full" value={formData.lastName} onChange={handleChange} required />
                 <p className="text-sm opacity-60">Last</p>
               </div>
             </div>
@@ -43,14 +42,15 @@ export default function ContactPageComponent({ props }) {
                 <p className="font-semibold">Email</p>
                 <span className="text-red-500">*</span>
               </div>
-              <input type="email" className="p-2 w-full border border-gray-200 focus:border-gray-500" required />
+              <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="p-2 w-full border border-gray-200 focus:border-gray-500" required />
             </div>
             <div>
               <div className="flex items-center gap-0.5">
                 <p className="font-semibold">Purpose</p>
                 <span className="text-red-500">*</span>
               </div>
-              <select name="purpose" id="purpose" className="w-full p-2 border border-gray-200" required>
+              <select name="purpose" id="purpose" className="w-full p-2 border border-gray-200" value={purpose} onChange={handlePurposeChange} required>
+                <option value="">Select a purpose</option>
                 <option value="create_branded_video">Create Branded Video</option>
                 <option value="screening_inquires">Screening Inquires</option>
                 <option value="career_inquires">Career Inquires</option>
@@ -62,7 +62,7 @@ export default function ContactPageComponent({ props }) {
                 <p className="font-semibold">Comment or Message</p>
                 <span className="text-red-500">*</span>
               </div>
-              <textarea name="comment_message" id="comment_message" className="w-full border border-gray-300" rows={5} required></textarea>
+              <textarea name="comment_message" id="comment_message" className="w-full border border-gray-300" rows={5} required ref={commentMessageRef} onChange={handleChange} defaultValue={commentMessage}></textarea>
             </div>
             <button className="uppercase bg-primary-red text-white py-4 px-5 font-semibold text-lg rounded-md hover:bg-red-400">Submit</button>
           </div>
