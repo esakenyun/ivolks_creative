@@ -1,4 +1,4 @@
-import { FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -25,11 +25,19 @@ export default function Footer() {
               Contact
             </a>
           </div>
-          <div className="flex flex-col gap-1.5 w-full">
+          <div className="flex flex-col gap-2 w-full">
             <p className="text-xl font-bold">Follow</p>
             <a href="https://www.instagram.com/ivolks_creative/" target="_blank" className="flex items-center gap-1 cursor-pointer">
               <FaInstagram />
-              <p className="text-sm">Instagram</p>
+              <p className="text-sm">ivolks_creative</p>
+            </a>
+            <a href="https://www.linkedin.com/company/ivolks-creative/" target="_blank" className="flex items-center gap-1 cursor-pointer">
+              <FaLinkedin />
+              <p className="text-sm">ivolks-creative</p>
+            </a>
+            <a href="https://www.tiktok.com/@ivolks_creative" target="_blank" className="flex items-center gap-1 cursor-pointer">
+              <FaTiktok />
+              <p className="text-sm">ivolks_creative</p>
             </a>
           </div>
           {/* <div className="w-3/4">
