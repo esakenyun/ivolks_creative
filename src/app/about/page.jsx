@@ -15,19 +15,19 @@ export default function AboutPage() {
     {
       name: "Dr. Satrio Pamungkas, S.Sn.,M.Sn.",
       position: "Founder",
-      imageUrl: "/people/Satrio Pamungkas.jpg",
+      imageUrl: "/profile/leader/Satrio Pamungkas.jpg",
       instagramUrl: "https://www.instagram.com/satriopepo/",
     },
     {
       name: "Erik Ferdian",
       position: "Founder",
-      imageUrl: "/people/Erik Ferdian.JPG",
+      imageUrl: "/profile/leader/Erik Ferdian.JPG",
       instagramUrl: "https://www.instagram.com/erfr/",
     },
     {
       name: "Riefian Fajarsyah",
       position: "CO-Founder",
-      imageUrl: "/people/Riefian Fajarsyah01.jpg",
+      imageUrl: "/profile/leader/Riefian Fajarsyah.jpg",
       instagramUrl: "https://www.instagram.com/ifanseventeen/",
     },
   ];
@@ -36,51 +36,57 @@ export default function AboutPage() {
     {
       name: "Ahmad Pippo",
       position: "Project Manager",
-      imageUrl: "/people/Ahmad Pippo.JPG",
+      imageUrl: "/profile/team/Ahmad Pippo.JPG",
       instagramUrl: "https://www.instagram.com/sam.pipps/",
     },
     {
       name: "Asep Lukmanul",
       position: "Visual Supervisor",
-      imageUrl: "/people/Asep Lukmanul.JPG",
+      imageUrl: "/profile/team/Asep Lukmanul.JPG",
       instagramUrl: "https://www.instagram.com/xeesixee/",
+    },
+    {
+      name: "Jokodin Sukowi",
+      position: "Project Manager",
+      imageUrl: "/profile/team/Jokodin.jpg",
+      instagramUrl: "https://www.instagram.com/jokodin/",
     },
   ];
 
   const internships = [
     {
       name: "Alia Eka Putri",
-      imageUrl: "/people/Alia Eka Putri.jpg",
+      imageUrl: "/profile/internship/Vol1/ALIA EKA PUTRI.jpg",
       instagramUrl: "https://www.instagram.com/2992pm/",
     },
     {
       name: "Jonathan Mepal Jeffry Napitulu",
-      imageUrl: "/people/Jonathan Mepal Jefry Napitupulu.jpg",
+      imageUrl: "/profile/internship/Vol1/Jonathan Mepal Jefry Napitupulu.jpg",
       instagramUrl: "https://www.instagram.com/jonathan_napitupulu_/",
     },
     {
       name: "Muhammad Rifqi Prayoga Rusli",
-      imageUrl: "/people/Muhammad Rifqi Prayoga Rusli.jpg",
+      imageUrl: "/profile/internship/Vol1/Muh Rifqi Prayoga Rusli .jpg",
       instagramUrl: "https://www.instagram.com/rifqiyoga_/)",
     },
     {
       name: "Marsya Haliza Syafei",
-      imageUrl: "/people/Marsya Haliza Syafei.jpg",
+      imageUrl: "/profile/internship/Vol1/MARSYA HALIZA SYAFEI.jpg",
       instagramUrl: "https://www.instagram.com/marsyahlzsf/",
     },
     {
       name: "Sitatun Attoyibah",
-      imageUrl: "/people/Sitatun Attoyibah.jpg",
+      imageUrl: "/profile/internship/Vol1/SITATUN ATTOYIBAH.jpg",
       instagramUrl: "https://www.instagram.com/ssttorii/",
     },
     {
       name: "Tharsius Celviano Ully",
-      imageUrl: "/people/Tharsius Celviano Ully.jpg",
+      imageUrl: "/profile/internship/Vol1/Tharsius Celviano Ully.jpg",
       instagramUrl: "https://www.instagram.com/tharsiuscelviano29/",
     },
     {
       name: "Zidan Verdian Windoe",
-      imageUrl: "/people/Zidan Verdian Windoe.jpg",
+      imageUrl: "/profile/internship/Vol1/Zidan Verdian Windoe.jpg",
       instagramUrl: "https://www.instagram.com/zidanwindoe/",
     },
   ];
@@ -128,6 +134,7 @@ export default function AboutPage() {
                   height={500}
                   className="w-full rounded-lg h-full"
                   alt="About us"
+                  quality={100}
                   priority
                 />
               </div>
@@ -154,7 +161,7 @@ export default function AboutPage() {
                     {founders.map((person, index) => (
                       <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
                         <a href={person.instagramUrl} target="_blank">
-                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
                         </a>
                         <div className="text-center mt-2">
                           <p className="font-semibold">{person.name}</p>
@@ -175,7 +182,7 @@ export default function AboutPage() {
                       {founders.slice(0, 2).map((person, index) => (
                         <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
                           <a href={person.instagramUrl} target="_blank">
-                            <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
                           </a>
                           <div className="text-center mt-2">
                             <p className="font-semibold">{person.name}</p>
@@ -188,7 +195,7 @@ export default function AboutPage() {
                       {founders.slice(2, 3).map((person, index) => (
                         <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
                           <a href={person.instagramUrl} target="_blank">
-                            <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
                           </a>
                           <div className="text-center mt-2">
                             <p className="font-semibold">{person.name}</p>
@@ -209,7 +216,7 @@ export default function AboutPage() {
                     {founders.map((person, index) => (
                       <div key={index} className="flex-shrink-0 w-full select-none">
                         <a href={person.instagramUrl} target="_blank">
-                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
                         </a>
                         <div className="text-center mt-2">
                           <p className="font-semibold">{person.name}</p>
@@ -225,15 +232,15 @@ export default function AboutPage() {
 
           <div className="px-[5%]">
             <h2 className="text-3xl font-bold mb-4">iVOLKS Team</h2>
-            {/* Tablet and Dekstop Section */}
-            <div className="hidden md:block">
+            {/* Dekstop Section */}
+            <div className="hidden lg:block">
               <div className="pt-[2%] flex gap-3">
                 <div className="overflow-x-auto w-full py-4">
                   <div className="flex space-x-10">
                     {teams.map((person, index) => (
                       <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
                         <a href={person.instagramUrl} target="_blank">
-                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
                         </a>
                         <div className="text-center mt-2">
                           <p className="font-semibold">{person.name}</p>
@@ -245,15 +252,50 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+            {/* Tablet Section */}
+            <div className="hidden md:block lg:hidden">
+              <div className="pt-[2%] flex gap-3">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="flex flex-col gap-4">
+                    <div className="flex w-full space-x-10">
+                      {teams.slice(0, 2).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {teams.slice(2, 3).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             {/* Phone Section */}
             <div className="md:hidden">
               <div className="pt-[2%]">
                 <div className="overflow-x-auto w-full py-4">
                   <div className="grid grid-cols-1 gap-4">
                     {teams.map((person, index) => (
-                      <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
+                      <div key={index} className="flex-shrink-0 w-full select-none">
                         <a href={person.instagramUrl} target="_blank">
-                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
                         </a>
                         <div className="text-center mt-2">
                           <p className="font-semibold">{person.name}</p>
@@ -268,7 +310,7 @@ export default function AboutPage() {
           </div>
 
           <div className="py-[4%] px-[5%]">
-            <h2 className="text-3xl font-bold mb-4">iVOLKS Internship</h2>
+            <h2 className="text-3xl font-bold mb-4">iVOLKS Internship Vol.1</h2>
             {/* Dekstop Section*/}
             <div className="hidden lg:block">
               <div className="pt-[2%]">

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="hidden md:block">
         <div className="flex justify-between">
           <div className="flex flex-col gap-1.5 w-full">
-            <p className="text-xl font-bold">New Business</p>
+            <p className="text-xl font-bold">iVOLKS Creative HQ</p>
             <p>ivolkscreative@gmail.com</p>
             <p>(+62)-851-6157-8045 (Ahmad Pippo)</p>
           </div>
