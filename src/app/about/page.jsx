@@ -312,7 +312,7 @@ export default function AboutPage() {
           <div className="py-[4%] px-[5%]">
             <h2 className="text-3xl font-bold mb-4">iVOLKS Internship Vol.1</h2>
             {/* Dekstop Section*/}
-            <div className="hidden lg:block">
+            <div className="hidden tablet-landscape:hidden lg:block">
               <div className="pt-[2%]">
                 <div className="overflow-x-auto w-full py-4">
                   <div className="hidden md:flex md:flex-col md:gap-4">
@@ -346,8 +346,57 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+            {/* Tablet Landscape Section */}
+            <div className="hidden md:hidden tablet-landscape:block lg:hidden">
+              <div className="pt-[2%]">
+                <div className="overflow-x-auto w-full py-4">
+                  <div className="hidden md:flex md:flex-col md:gap-4">
+                    <div className="flex w-full space-x-10">
+                      {internships.slice(0, 3).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships.slice(3, 6).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships.slice(6, 7).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Tablet Section */}
-            <div className="hidden md:block lg:hidden">
+            <div className="hidden md:block tablet-landscape:hidden lg:hidden">
               <div className="pt-[2%]">
                 <div className="flex flex-col gap-4">
                   {internships.slice(0, visibleCountTab).map((person, index) => {

@@ -84,7 +84,7 @@ export default function ContactPageComponent({ props }) {
           </div>
           <div className="flex items-center gap-10">
             <IoMailOutline className="text-3xl" />
-            <p>ivolkscreative@gmail.com</p>
+            <p>contact@ivolkscreative.com</p>
           </div>
         </div>
         <div className="flex flex-col gap-5">
