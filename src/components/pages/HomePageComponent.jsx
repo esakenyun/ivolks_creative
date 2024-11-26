@@ -11,10 +11,10 @@ export default function HomePageComponent() {
   return (
     <div>
       <video className="w-full h-screen object-cover" autoPlay loop muted playsInline>
-        <source src={"videos/video_hero.mp4"} />
+        <source src={"videos/video_ivolks_intro.mp4"} />
       </video>
-      <motion.div initial="hidden" animate={{ opacity, y: 0 }} variants={variants} transition={{ duration: 0.5 }} className="absolute top-0 w-full h-full flex flex-col justify-center items-center md:gap-[10%] lg:gap-[25%]">
-        <Image src={"/logo/logo_v_black.png"} className="w-[45%] md:w-[30%] lg:w-auto h-auto select-none" width={300} height={300} priority alt="Logo" />
+      <motion.div initial="hidden" animate={{ opacity, y: 0 }} variants={variants} transition={{ duration: 0.5 }} className="absolute top-0 w-full h-full flex flex-col justify-center items-center md:gap-[10%] lg:gap-[23%]">
+        <Image src={"/logo/logo_v_red.png"} className="w-[45%] md:w-[30%] lg:w-auto h-auto select-none" width={300} height={300} priority alt="Logo" />
         <div className="">
           <div className="flex flex-col md:flex-row gap-20 lg:gap-40 pt-3">
             <Link href={"/about"}>

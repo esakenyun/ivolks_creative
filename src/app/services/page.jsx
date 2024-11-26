@@ -3,11 +3,11 @@ import NavbarAnother from "@/components/navigation/NavbarAnother";
 import Footer from "@/components/section/Footer";
 import { FaArrowUp, FaComputer } from "react-icons/fa6";
 import { PiVideoBold } from "react-icons/pi";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import ContactBottom from "@/components/section/ContactBottom";
 import { IoCameraOutline } from "react-icons/io5";
 import { IoIosPaper } from "react-icons/io";
+import ClientSection from "@/components/section/ClientSlider";
 
 export default function Services() {
   const [scrolling, setScrolling] = useState(false);
@@ -43,15 +43,15 @@ export default function Services() {
     },
     {
       name: "Telkom Indonesia",
-      imageUrl: "/client/telkomindonesia.png",
+      imageUrl: "/client/crop/telkomindonesiacrop.png",
     },
     {
       name: "Komisi Pemilihan Umum",
-      imageUrl: "/client/kpu.png",
+      imageUrl: "/client/crop/kpucrop.png",
     },
     {
       name: "BSI",
-      imageUrl: "/client/bsi.png",
+      imageUrl: "/client/crop/bsicrop.png",
     },
     {
       name: "Universitas Tarumanegara",
@@ -59,39 +59,47 @@ export default function Services() {
     },
     {
       name: "Trinity Optima Production",
-      imageUrl: "/client/trinityoptimaproduction.png",
+      imageUrl: "/client/crop/trinityoptimaproductioncrop.png",
     },
-    // {
-    //   name: "Max Stream",
-    //   imageUrl: "",
-    // },
-    // {
-    //   name: "Zoya Cosmetics",
-    //   imageUrl: "",
-    // },
+    {
+      name: "Max Stream",
+      imageUrl: "/client/crop/maxstreamcrop.png",
+    },
+    {
+      name: "Zoya Cosmetics",
+      imageUrl: "/client/crop/zoyacrop.png",
+    },
     {
       name: "K-Link",
-      imageUrl: "/client/klink.png",
+      imageUrl: "/client/crop/klinkcrop.png",
     },
     {
       name: "Dentsu",
-      imageUrl: "/client/dentsu.png",
+      imageUrl: "/client/crop/dentsucrop.png",
     },
     {
       name: "Unilever",
-      imageUrl: "/client/unilever.png",
+      imageUrl: "/client/crop/unilevercrop.png",
     },
     {
       name: "Fiesta",
-      imageUrl: "/client/fiesta.png",
+      imageUrl: "/client/crop/fiestacrop.png",
+    },
+    {
+      name: "Pizza Hut Delivery",
+      imageUrl: "/client/crop/phdcrop.png",
     },
     {
       name: "Campina",
-      imageUrl: "/client/campina.png",
+      imageUrl: "/client/crop/campinacrop.png",
+    },
+    {
+      name: "Rinso",
+      imageUrl: "/client/crop/rinsocrop.png",
     },
     {
       name: "Zwitsal",
-      imageUrl: "/client/zwitsal.png",
+      imageUrl: "/client/crop/zwitsalcrop.png",
     },
   ];
 
@@ -146,7 +154,8 @@ export default function Services() {
               </div>
             </div>
           </div>
-          <div className="py-[7%] px-[4%]">
+          <ClientSection clients={clients} />
+          {/* <div className="py-[7%] px-[4%]">
             <h2 className="text-3xl font-bold">Our Clients</h2>
             <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-5 md:gap-10 justify-center items-center">
               {clients.map((client, index) => (
@@ -155,7 +164,7 @@ export default function Services() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <ContactBottom />
           {scrolling && (

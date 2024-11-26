@@ -128,15 +128,7 @@ export default function AboutPage() {
           <div className="px-[5%] pt-[25%] md:pt-[20%] lg:pt-[11%]">
             <div className="flex flex-col md:flex-row items-start gap-5">
               <div className="md:w-1/2">
-                <Image
-                  src="https://images.unsplash.com/photo-1602696538772-97543c359260?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  width={500}
-                  height={500}
-                  className="w-full rounded-lg h-full"
-                  alt="About us"
-                  quality={100}
-                  priority
-                />
+                <Image src="/about/about_us.png" width={1000} height={1000} className="w-full rounded-lg h-full lg:h-[27rem]" alt="About us" quality={100} priority />
               </div>
               <div className="md:w-1/2">
                 <h1 className="text-left uppercase text-primary-red font-bold text-xs lg:text-sm">About Us</h1>

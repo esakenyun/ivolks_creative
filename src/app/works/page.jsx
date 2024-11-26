@@ -61,11 +61,11 @@ export default function WorksPage() {
           <NavbarAnother />
           <div className="pt-20">
             <p className="text-center text-2xl md:text-4xl font-medium">Works</p>
-            <div className="flex justify-center gap-3 py-[1%]">
-              {["All", "Corporate", "Music Video", "Movie"].map((category) => (
-                <p key={category} className={`font-medium cursor-pointer ${activeCategory === category ? "text-primary-red" : "hover:text-primary-red"}`} onClick={() => setActiveCategory(category)}>
+            <div className="flex justify-center gap-3 py-[1%] flex-wrap">
+              {["All", "Film", "Corporate", "Motion Graphics", "Music"].map((category) => (
+                <button key={category} className={`font-medium cursor-pointer ${activeCategory === category ? "text-primary-red" : "hover:text-primary-red"}`} onClick={() => setActiveCategory(category)}>
                   {category}
-                </p>
+                </button>
               ))}
             </div>
             <div>
