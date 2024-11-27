@@ -13,7 +13,7 @@ export default function ContactPageComponent({ props }) {
       {/* Hero Section */}
       <div className="w-full h-screen flex flex-col justify-center items-center text-center">
         <h1 className="font-bold text-6xl lg:text-8xl uppercase">Let&apos;s Get In Touch!</h1>
-        <p className="lg:text-lg font-medium">Got a project in mind or need our creative expertise? Fill out the form below, and let&apos;s make somezthing amazing together!</p>
+        <p className="lg:text-lg font-medium">Got a project in mind or need our creative expertise? Fill out the form below, and let&apos;s make something amazing together!</p>
       </div>
       {/* Contact US */}
       <div className="py-[8%] px-[5%] md:py-[5%] md:px-[3%] grid lg:grid-cols-2 gap-10 lg:gap-20">

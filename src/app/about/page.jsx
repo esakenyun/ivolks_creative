@@ -128,7 +128,7 @@ export default function AboutPage() {
           <div className="px-[5%] pt-[25%] md:pt-[20%] lg:pt-[11%]">
             <div className="flex flex-col md:flex-row items-start gap-5">
               <div className="md:w-1/2">
-                <Image src="/about/about_us.png" width={1000} height={1000} className="w-full rounded-lg h-full lg:h-[27rem]" alt="About us" quality={100} priority />
+                <Image src="/about/about_us.png" width={1000} height={1000} className="w-full rounded-lg h-full" alt="About us" quality={100} priority />
               </div>
               <div className="md:w-1/2">
                 <h1 className="text-left uppercase text-primary-red font-bold text-xs lg:text-sm">About Us</h1>
@@ -143,7 +143,7 @@ export default function AboutPage() {
           </div>
 
           {/* Our Teams iVolks Section */}
-          <div className="py-[7%] px-[5%]">
+          <div className="py-[10%] px-[5%]">
             <h2 className="text-3xl font-bold mb-4">iVOLKS Leader</h2>
             {/* Dekstop Section */}
             <div className="hidden lg:block">
