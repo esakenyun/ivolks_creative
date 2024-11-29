@@ -7,7 +7,7 @@ import VideoPreviewPlay from "@/components/modal/VideoPreviewPlay";
 import workData from "../../components/data/works.json";
 import { FaArrowUp } from "react-icons/fa6";
 import Footer from "@/components/section/Footer";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function WorksPage() {
   const data = workData.data;
@@ -19,8 +19,6 @@ export default function WorksPage() {
   const [scrolling, setScrolling] = useState(false);
 
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const categoryFromQuery = searchParams.get("category");
 
   useEffect(() => {
     const categoryFromQuery = new URLSearchParams(window.location.search).get("category");
