@@ -9,80 +9,115 @@
     },
     {
       "id": 2,
-      "title": "Kau & Dia",
+      "title": "Kau & Dia Trailer",
       "thumbnailUrl": "/thumbnail/kaudandia.jpg",
-      "link": "https://www.youtube.com/embed/OwirIovwMoQ?si=2c9W62Z7-7acnONy",
+      "link": "https://www.youtube.com/embed/Po2PTs6VvqQ?si=7QxDlGYn49lJ-Z-J",
       "category": "Film"
     },
     {
       "id": 3,
+      "title": "CAP PANDA X NEX CARLOS",
+      "thumbnailUrl": "/thumbnail/cappandanexcarlos.jpg",
+      "link": "https://www.youtube.com/embed/2K5TkYD8BIQ?si=8khUDIaYbKMq4iuY",
+      "category": "TVC"
+    },
+    {
+      "id": 4,
       "title": "Transition Bumper",
       "thumbnailUrl": "/thumbnail/transitionbumper.jpg",
       "link": "https://www.youtube.com/embed/ODupVm_qs54?si=ri4m3NhNonNX7WkE",
       "category": "Motion Graphics"
     },
     {
-      "id": 4,
+      "id": 5,
+      "title": "PGN 2 Compro",
+      "thumbnailUrl": "/thumbnail/pgn2.jpg",
+      "link": "https://www.youtube.com/embed/vyq71fnF5u8?si=ToeFfwZoOupymmRG",
+      "category": "Corporate"
+    },
+    {
+      "id": 6,
       "title": "Semangat Zaman Now",
       "thumbnailUrl": "/thumbnail/coba4.jpg",
       "link": "https://www.youtube.com/embed/Z4_cyuYQStY?si=IWcplbocOcEWN_8l",
       "category": "Music"
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "Fiesta Ready to Serve",
       "thumbnailUrl": "/thumbnail/fiesta.jpg",
-      "link": "https://www.youtube.com/embed/eKXDzfhxulY?si=gu9nhoD6i8gE7SVd",
-      "category": "Commercial"
+      "link": "https://www.youtube.com/embed/4qSHeEAOrJo?si=MdPL5oG5zljAA2Lg",
+      "category": "TVC"
     },
     {
-      "id": 6,
-      "title": "Product Launching",
+      "id": 8,
+      "title": "KLINK - Product Launching",
       "thumbnailUrl": "/thumbnail/klink.jpg",
       "link": "https://www.youtube.com/embed/yQTFyWtR44c?si=3ThYocTSbTVS4eF2",
       "category": "Corporate"
     },
     {
-      "id": 7,
-      "title": "Campina Gold Ribbon",
-      "thumbnailUrl": "/thumbnail/goldribbon.jpg",
-      "link": "https://www.youtube.com/embed/qvkPmJoI-TU?si=9HskTJM05wU-oBgq",
-      "category": "Commercial"
-    },
-    {
-      "id": 8,
-      "title": "Nongshim Bulgogi",
-      "thumbnailUrl": "/thumbnail/nongshimbulgogi.jpg",
-      "link": "https://www.youtube.com/embed/e5_YCeukpb0?si=p1Jl4LBj1F-Fu8Mq",
-      "category": "Commercial"
-    },
-    {
       "id": 9,
+      "title": "Gold Ribbon",
+      "thumbnailUrl": "/thumbnail/goldribbon.jpg",
+      "link": "https://www.youtube.com/embed/Fqji1QsuPjU?si=Vpv45G3v26Nny8cQ",
+      "category": "TVC"
+    },
+    {
+      "id": 10,
+      "title": "Nongshim STY Dance",
+      "thumbnailUrl": "/thumbnail/nongshimbulgogi.jpg",
+      "link": "https://www.youtube.com/embed/g5tYAdjGnHU?si=rnC6UD7N1i6k1Vi6",
+      "category": "TVC"
+    },
+    {
+      "id": 11,
       "title": "Joint Offshore Patrol",
       "thumbnailUrl": "/thumbnail/pgnsaka.jpg",
       "link": "https://www.youtube.com/embed/SExtlH4jGJg?si=mwKhyrpl9QfN4xag",
       "category": "Corporate"
     },
     {
-      "id": 10,
+      "id": 12,
+      "title": "Smartheart",
+      "thumbnailUrl": "/thumbnail/smartheart.jpg",
+      "link": "https://www.youtube.com/embed/BiNZPXapJso?si=5LO1sGBNMrwomD_G",
+      "category": "TVC"
+    },
+    {
+      "id": 13,
       "title": "Pizza Hut Delivery",
       "thumbnailUrl": "/thumbnail/phd.jpg",
       "link": "https://www.youtube.com/embed/ciEsspUTg9g?si=D1KlQ3w0RlNFvVNG",
       "category": "Motion Graphics"
     },
     {
-      "id": 11,
+      "id": 14,
       "title": "Proud UNTARIAN",
       "thumbnailUrl": "/thumbnail/prouduntarian.jpg",
       "link": "https://www.youtube.com/embed/mkPYGJRvSQM?si=iRS7arwNV3DOIOYG",
       "category": "Corporate"
     },
     {
-      "id": 12,
-      "title": "BPJS",
+      "id": 15,
+      "title": "Zoya",
+      "thumbnailUrl": "/thumbnail/zoya.jpg",
+      "link": "https://www.youtube.com/embed/UQPu-saiqmI?si=2rN69dciPD8HeDkJ",
+      "category": "TVC"
+    },
+    {
+      "id": 16,
+      "title": "BPJS KETENAGAKERJAAN COMPRO",
       "thumbnailUrl": "/thumbnail/bpjs.jpg",
-      "link": "https://www.youtube.com/embed/8W-1PK7g8G8?si=Ixu65qbbI1ulj3TW",
+      "link": "https://www.youtube.com/embed/Kd-S2Gc212o?si=PwHasqbuX5zF0Rbi",
       "category": "Corporate"
+    },
+    {
+      "id": 17,
+      "title": "Torabika Creamy Latte",
+      "thumbnailUrl": "/thumbnail/torabika.jpg",
+      "link": "https://www.youtube.com/embed/wn4NppYBck8?si=cD0rdjN_ZkPSPpzW",
+      "category": "TVC"
     }
   ]
 }

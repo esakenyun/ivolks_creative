@@ -10,27 +10,27 @@ const ClientSection = ({ clients }) => {
       <h2 className="text-3xl font-bold mb-6">Our Clients</h2>
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={0} // Tidak ada gap antar slide
+        spaceBetween={0}
         slidesPerView={7}
         autoplay={{
-          delay: 0, // Menghapus delay antara transisi slide
-          disableOnInteraction: false, // Memastikan autoplay terus berjalan meskipun pengguna berinteraksi
+          delay: 0,
+          disableOnInteraction: false,
           stopOnLastSlide: false,
         }}
-        speed={3000} // Kecepatan lebih cepat
+        speed={3000}
         loop={true}
         breakpoints={{
           0: {
             slidesPerView: 3,
-            spaceBetween: 0, // Gap di breakpoint kecil juga 0
+            spaceBetween: 0,
           },
           640: {
             slidesPerView: 5,
-            spaceBetween: 0, // Gap di breakpoint menengah juga 0
+            spaceBetween: 0,
           },
           1024: {
             slidesPerView: 7,
-            spaceBetween: 0, // Gap di breakpoint besar juga 0
+            spaceBetween: 0,
           },
         }}
         className="clients-slider">

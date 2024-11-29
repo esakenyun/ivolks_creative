@@ -8,9 +8,11 @@ import ContactBottom from "@/components/section/ContactBottom";
 import { IoCameraOutline } from "react-icons/io5";
 import { IoIosPaper } from "react-icons/io";
 import ClientSection from "@/components/section/ClientSlider";
+import { useRouter } from "next/navigation";
 
 export default function Services() {
   const [scrolling, setScrolling] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +23,10 @@ export default function Services() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const navigateToWorksPage = (category) => {
+    router.push(`/works?category=${category}`);
+  };
 
   const scrollToTop = () => {
     const scrollStep = -window.scrollY / (500 / 15);
@@ -120,13 +126,24 @@ export default function Services() {
                   <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Video Production</div>
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-48 bg-white shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out z-10 hidden group-hover:block">
                     <ul>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Film</li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">TVC</li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">DVC</li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Music Video</li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Company Profile</li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Motion Graphics & Animation</li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer">Documentary</li>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Film")}>
+                        Film
+                      </li>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("TVC")}>
+                        TVC
+                      </li>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("TVC")}>
+                        DVC
+                      </li>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Music")}>
+                        Music Video
+                      </li>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Corporate")}>
+                        Company Profile
+                      </li>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Motion Graphics")}>
+                        Motion Graphics & Animation
+                      </li>
                     </ul>
                   </div>
                 </div>

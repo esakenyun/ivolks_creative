@@ -7,6 +7,7 @@ import VideoPreviewPlay from "@/components/modal/VideoPreviewPlay";
 import workData from "../../components/data/works.json";
 import { FaArrowUp } from "react-icons/fa6";
 import Footer from "@/components/section/Footer";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function WorksPage() {
   const data = workData.data;
@@ -16,6 +17,17 @@ export default function WorksPage() {
   const [visibleCount, setVisibleCount] = useState(6);
   const [visibleCountMobile, setVisibleCountMobile] = useState(5);
   const [scrolling, setScrolling] = useState(false);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const categoryFromQuery = searchParams.get("category");
+
+  useEffect(() => {
+    const categoryFromQuery = new URLSearchParams(window.location.search).get("category");
+    if (categoryFromQuery) {
+      setActiveCategory(categoryFromQuery);
+    }
+  }, []);
 
   const openModal = (item) => {
     setSelectedItem(item);
@@ -54,6 +66,12 @@ export default function WorksPage() {
     }, 20);
   };
 
+  const handleCategoryChange = (category) => {
+    setActiveCategory(category);
+    // Update URL with category query parameter
+    router.push(`/works?category=${category}`);
+  };
+
   return (
     <>
       <main className="flex flex-col min-h-screen">
@@ -63,8 +81,8 @@ export default function WorksPage() {
             <p className="text-center text-2xl md:text-4xl font-medium">Works</p>
             <div className="flex justify-center gap-3 py-[1%] flex-wrap">
               {/* Tambahin TVC */}
-              {["All", "Film", "Corporate", "Motion Graphics", "Music"].map((category) => (
-                <button key={category} className={`font-medium cursor-pointer ${activeCategory === category ? "text-primary-red" : "hover:text-primary-red"}`} onClick={() => setActiveCategory(category)}>
+              {["All", "TVC", "Film", "Corporate", "Motion Graphics", "Music"].map((category) => (
+                <button key={category} className={`font-medium cursor-pointer ${activeCategory === category ? "text-primary-red" : "hover:text-primary-red"}`} onClick={() => handleCategoryChange(category)}>
                   {category}
                 </button>
               ))}
