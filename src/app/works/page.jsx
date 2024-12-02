@@ -32,7 +32,7 @@ export default function WorksPage() {
     setModalOpen(true);
   };
 
-  const filteredData = activeCategory === "All" ? data : data.filter((item) => item.category === activeCategory);
+  const filteredData = activeCategory === "All" ? data : activeCategory === "TVC/DVC" ? data.filter((item) => item.category === "TVC" || item.category === "DVC") : data.filter((item) => item.category === activeCategory);
   const visibleDataMobile = filteredData.slice(0, visibleCountMobile);
   const visibleData = filteredData.slice(0, visibleCount);
 
@@ -79,7 +79,7 @@ export default function WorksPage() {
             <p className="text-center text-2xl md:text-4xl font-medium">Works</p>
             <div className="flex justify-center gap-3 py-[1%] flex-wrap">
               {/* Tambahin TVC */}
-              {["All", "TVC", "Film", "Corporate", "Motion Graphics", "Music"].map((category) => (
+              {["All", "TVC/DVC", "Film", "Corporate", "Motion Graphics", "Music"].map((category) => (
                 <button key={category} className={`font-medium cursor-pointer ${activeCategory === category ? "text-primary-red" : "hover:text-primary-red"}`} onClick={() => handleCategoryChange(category)}>
                   {category}
                 </button>

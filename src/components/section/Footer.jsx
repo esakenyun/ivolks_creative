@@ -31,6 +31,10 @@ export default function Footer() {
               <FaInstagram />
               <p className="text-sm">ivolks_creative</p>
             </a>
+            <a href="https://www.instagram.com/ivolks.studio/" target="_blank" className="flex items-center gap-1 cursor-pointer">
+              <FaInstagram />
+              <p className="text-sm">ivolks.studio</p>
+            </a>
             <a href="https://www.linkedin.com/company/ivolks-creative/" target="_blank" className="flex items-center gap-1 cursor-pointer">
               <FaLinkedin />
               <p className="text-sm">ivolks-creative</p>
@@ -54,6 +58,10 @@ export default function Footer() {
             <a href="https://www.instagram.com/ivolks_creative/" target="_blank" className="flex items-center gap-1 cursor-pointer">
               <FaInstagram />
               <p className="text-xs">ivolks_creative</p>
+            </a>
+            <a href="https://www.instagram.com/ivolks.studio/" target="_blank" className="flex items-center gap-1 cursor-pointer">
+              <FaInstagram />
+              <p className="text-xs">ivolks.studio</p>
             </a>
             <a href="https://www.linkedin.com/company/ivolks-creative/" target="_blank" className="flex items-center gap-1 cursor-pointer">
               <FaLinkedin />

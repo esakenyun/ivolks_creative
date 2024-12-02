@@ -107,6 +107,62 @@ export default function Services() {
       name: "Zwitsal",
       imageUrl: "/client/crop/zwitsalcrop.png",
     },
+    {
+      name: "Ancol Beach City",
+      imageUrl: "/client/crop/ancolbeachcitycrop.png",
+    },
+    {
+      name: "Anyaman Bali",
+      imageUrl: "/client/crop/anyamanbalicrop.png",
+    },
+    {
+      name: "BPJS Ketenagakerjaan",
+      imageUrl: "/client/crop/bpjsketenagakerjaancrop.png",
+    },
+    {
+      name: "Kino Indonesia",
+      imageUrl: "/client/crop/kinoindonesiacrop.png",
+    },
+    {
+      name: "Mayora",
+      imageUrl: "/client/crop/mayoracrop.png",
+    },
+    {
+      name: "Nongshim Farmers Heart",
+      imageUrl: "/client/crop/nongshimfarmersheartcrop.png",
+    },
+    {
+      name: "President University",
+      imageUrl: "/client/crop/presidentuniversitycrop.png",
+    },
+    {
+      name: "Smart Heart",
+      imageUrl: "/client/crop/smartheartcrop.png",
+    },
+    {
+      name: "SMKN 1 Sukabumi",
+      imageUrl: "/client/crop/smkn1sukabumicrop.png",
+    },
+    {
+      name: "SMKN 5 Kota Bekasi",
+      imageUrl: "/client/crop/smkn5kotabekasicrop.png",
+    },
+    {
+      name: "Toya",
+      imageUrl: "/client/crop/toyacrop.png",
+    },
+    {
+      name: "True Id",
+      imageUrl: "/client/crop/trueidcrop.png",
+    },
+    {
+      name: "Unicharm Company",
+      imageUrl: "/client/crop/unicharmcompanycrop.png",
+    },
+    {
+      name: "Universitas Sahid",
+      imageUrl: "/client/crop/universitassahidcrop.png",
+    },
   ];
 
   return (
@@ -129,10 +185,10 @@ export default function Services() {
                       <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Film")}>
                         Film
                       </li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("TVC")}>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("TVC/DVC")}>
                         TVC
                       </li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("TVC")}>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("TVC/DVC")}>
                         DVC
                       </li>
                       <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Music")}>
