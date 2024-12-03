@@ -35,8 +35,8 @@ export default function CreativeDigitalMarketing() {
       <main className="flex flex-col min-h-screen">
         <div>
           <NavbarAnother />
-          <div className="pt-[3%]">
-            <Image src={"/creativedigitalmarketing/banner.jpg"} className="w-full h-screen object-cover" width={10000} height={10000} alt="Banner CDM" priority />
+          <div className="pt-[16%] md:pt-[5%] lg:pt-[3%]">
+            <Image src={"/creativedigitalmarketing/banner.jpg"} className="w-full h-auto lg:h-screen object-cover" width={10000} height={10000} alt="Banner CDM" priority />
           </div>
           <div className="pt-[8%] px-[5%] md:pt-[5%] md:px-[3%]">
             <h1 className="text-2xl md:text-4xl font-bold border-b-2 pb-[1%] w-fit">Creative Digital Marketing</h1>

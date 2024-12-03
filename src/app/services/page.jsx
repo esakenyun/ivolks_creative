@@ -78,8 +78,8 @@ export default function Services() {
       imageUrl: "/client/crop/unicharmcompanycrop.png",
     },
     {
-      name: "Nongshim Farmers Heart",
-      imageUrl: "/client/crop/nongshimfarmersheartcrop.png",
+      name: "Farmers Heart",
+      imageUrl: "/client/crop/farmersheart.jpg",
     },
     {
       name: "K-Link",
@@ -98,8 +98,8 @@ export default function Services() {
       imageUrl: "/client/crop/dentsucrop.png",
     },
     {
-      name: "Ancol Beach City",
-      imageUrl: "/client/crop/ancolbeachcitycrop.png",
+      name: "Beach City Stadium",
+      imageUrl: "/client/crop/beachcityinternationalstadium.png",
     },
     {
       name: "True Id",
@@ -133,17 +133,21 @@ export default function Services() {
       name: "Smart Heart",
       imageUrl: "/client/crop/smartheartcrop.png",
     },
-    // {
-    //   name: "Nongshim",
-    //   imageUrl: "/client/nongshim.png",
-    // },
+    {
+      name: "Nongshim",
+      imageUrl: "/client/crop/nongshim.png",
+    },
     {
       name: "Toya",
-      imageUrl: "/client/crop/toyacrop.png",
+      imageUrl: "/client/crop/toyalogo.png",
     },
     {
       name: "Zoya Cosmetics",
       imageUrl: "/client/crop/zoyacrop.png",
+    },
+    {
+      name: "CMN Glow",
+      imageUrl: "/client/crop/cmnglow.png",
     },
     {
       name: "BSI",
