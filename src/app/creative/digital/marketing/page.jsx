@@ -1,9 +1,35 @@
+"use client";
 import NavbarAnother from "@/components/navigation/NavbarAnother";
+import ContactBottom from "@/components/section/ContactBottom";
 import Footer from "@/components/section/Footer";
 import Image from "next/image";
-import { FaCalendarCheck, FaListCheck } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import { FaArrowUp, FaCalendarCheck, FaListCheck } from "react-icons/fa6";
 
 export default function CreativeDigitalMarketing() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(window.scrollY > 500);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    const scrollStep = -window.scrollY / (500 / 15);
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 20);
+  };
+
   return (
     <>
       <main className="flex flex-col min-h-screen">
@@ -44,8 +70,13 @@ export default function CreativeDigitalMarketing() {
               </div>
             </div>
           </div>
+          <ContactBottom />
+          {scrolling && (
+            <button onClick={scrollToTop} className="fixed bottom-28 right-3 bg-transparent text-gray-500 p-4 border border-gray-400 rounded-full shadow-lg hover:bg-gray-300 transition text-xl z-50">
+              <FaArrowUp />
+            </button>
+          )}
         </div>
-        ``
         <Footer />
       </main>
     </>
