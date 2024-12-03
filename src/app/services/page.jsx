@@ -9,6 +9,7 @@ import { IoCameraOutline } from "react-icons/io5";
 import { IoIosPaper } from "react-icons/io";
 import ClientSection from "@/components/section/ClientSlider";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Services() {
   const [scrolling, setScrolling] = useState(false);
@@ -38,14 +39,11 @@ export default function Services() {
       }
     }, 20);
   };
+
   const clients = [
     {
       name: "pgnSaka",
       imageUrl: "/client/pgnsaka.png",
-    },
-    {
-      name: "FIFGroup",
-      imageUrl: "/client/fifgroup.png",
     },
     {
       name: "Telkom Indonesia",
@@ -56,12 +54,36 @@ export default function Services() {
       imageUrl: "/client/crop/kpucrop.png",
     },
     {
-      name: "BSI",
-      imageUrl: "/client/crop/bsicrop.png",
+      name: "BPJS Ketenagakerjaan",
+      imageUrl: "/client/crop/bpjsketenagakerjaancrop.png",
     },
     {
-      name: "Universitas Tarumanegara",
-      imageUrl: "/client/untar.png",
+      name: "FIFGroup",
+      imageUrl: "/client/fifgroup.png",
+    },
+    {
+      name: "Unilever",
+      imageUrl: "/client/crop/unilevercrop.png",
+    },
+    {
+      name: "Mayora",
+      imageUrl: "/client/crop/mayoracrop.png",
+    },
+    {
+      name: "Kino Indonesia",
+      imageUrl: "/client/crop/kinoindonesiacrop.png",
+    },
+    {
+      name: "Unicharm Company",
+      imageUrl: "/client/crop/unicharmcompanycrop.png",
+    },
+    {
+      name: "Nongshim Farmers Heart",
+      imageUrl: "/client/crop/nongshimfarmersheartcrop.png",
+    },
+    {
+      name: "K-Link",
+      imageUrl: "/client/crop/klinkcrop.png",
     },
     {
       name: "Trinity Optima Production",
@@ -72,20 +94,20 @@ export default function Services() {
       imageUrl: "/client/crop/maxstreamcrop.png",
     },
     {
-      name: "Zoya Cosmetics",
-      imageUrl: "/client/crop/zoyacrop.png",
-    },
-    {
-      name: "K-Link",
-      imageUrl: "/client/crop/klinkcrop.png",
-    },
-    {
       name: "Dentsu",
       imageUrl: "/client/crop/dentsucrop.png",
     },
     {
-      name: "Unilever",
-      imageUrl: "/client/crop/unilevercrop.png",
+      name: "Ancol Beach City",
+      imageUrl: "/client/crop/ancolbeachcitycrop.png",
+    },
+    {
+      name: "True Id",
+      imageUrl: "/client/crop/trueidcrop.png",
+    },
+    {
+      name: "Anyaman Bali",
+      imageUrl: "/client/crop/anyamanbalicrop.png",
     },
     {
       name: "Fiesta",
@@ -108,36 +130,36 @@ export default function Services() {
       imageUrl: "/client/crop/zwitsalcrop.png",
     },
     {
-      name: "Ancol Beach City",
-      imageUrl: "/client/crop/ancolbeachcitycrop.png",
+      name: "Smart Heart",
+      imageUrl: "/client/crop/smartheartcrop.png",
+    },
+    // {
+    //   name: "Nongshim",
+    //   imageUrl: "/client/nongshim.png",
+    // },
+    {
+      name: "Toya",
+      imageUrl: "/client/crop/toyacrop.png",
     },
     {
-      name: "Anyaman Bali",
-      imageUrl: "/client/crop/anyamanbalicrop.png",
+      name: "Zoya Cosmetics",
+      imageUrl: "/client/crop/zoyacrop.png",
     },
     {
-      name: "BPJS Ketenagakerjaan",
-      imageUrl: "/client/crop/bpjsketenagakerjaancrop.png",
+      name: "BSI",
+      imageUrl: "/client/crop/bsicrop.png",
     },
     {
-      name: "Kino Indonesia",
-      imageUrl: "/client/crop/kinoindonesiacrop.png",
-    },
-    {
-      name: "Mayora",
-      imageUrl: "/client/crop/mayoracrop.png",
-    },
-    {
-      name: "Nongshim Farmers Heart",
-      imageUrl: "/client/crop/nongshimfarmersheartcrop.png",
+      name: "Universitas Tarumanegara",
+      imageUrl: "/client/untar.png",
     },
     {
       name: "President University",
       imageUrl: "/client/crop/presidentuniversitycrop.png",
     },
     {
-      name: "Smart Heart",
-      imageUrl: "/client/crop/smartheartcrop.png",
+      name: "Universitas Sahid",
+      imageUrl: "/client/crop/universitassahidcrop.png",
     },
     {
       name: "SMKN 1 Sukabumi",
@@ -146,22 +168,6 @@ export default function Services() {
     {
       name: "SMKN 5 Kota Bekasi",
       imageUrl: "/client/crop/smkn5kotabekasicrop.png",
-    },
-    {
-      name: "Toya",
-      imageUrl: "/client/crop/toyacrop.png",
-    },
-    {
-      name: "True Id",
-      imageUrl: "/client/crop/trueidcrop.png",
-    },
-    {
-      name: "Unicharm Company",
-      imageUrl: "/client/crop/unicharmcompanycrop.png",
-    },
-    {
-      name: "Universitas Sahid",
-      imageUrl: "/client/crop/universitassahidcrop.png",
     },
   ];
 
@@ -191,7 +197,7 @@ export default function Services() {
                       <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("TVC/DVC")}>
                         DVC
                       </li>
-                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Music")}>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Music Video")}>
                         Music Video
                       </li>
                       <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToWorksPage("Corporate")}>
@@ -205,23 +211,23 @@ export default function Services() {
                 </div>
 
                 <div className="relative flex flex-col items-center group">
-                  <a href="/works" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
+                  <Link href="/works" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
                     <IoCameraOutline className="text-3xl" />
-                  </a>
+                  </Link>
                   <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Photography</div>
                 </div>
 
                 <div className="relative flex flex-col items-center group">
-                  <div className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
+                  <Link href="/creative/digital/marketing" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
                     <IoIosPaper className="text-3xl" />
-                  </div>
-                  <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Creative Media Planning</div>
+                  </Link>
+                  <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Creative Digital Marketing</div>
                 </div>
 
                 <div className="relative flex flex-col items-center group">
-                  <a href="/works" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
+                  <Link href="/works" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
                     <FaComputer className="text-3xl" />
-                  </a>
+                  </Link>
                   <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Post House</div>
                 </div>
               </div>

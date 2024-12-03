@@ -63,6 +63,8 @@ export default function Footer() {
               <FaInstagram />
               <p className="text-xs">ivolks.studio</p>
             </a>
+          </div>
+          <div className="flex gap-2">
             <a href="https://www.linkedin.com/company/ivolks-creative/" target="_blank" className="flex items-center gap-1 cursor-pointer">
               <FaLinkedin />
               <p className="text-xs">ivolks-creative</p>
