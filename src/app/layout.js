@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/scrolling/SmoothScrolling";
@@ -14,7 +15,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={monserrat.className}>
         <AnimationPage>
-          <SmoothScrolling>{children}</SmoothScrolling>
+          <SmoothScrolling>
+            {children}
+            <Analytics />
+          </SmoothScrolling>
         </AnimationPage>
       </body>
     </html>
