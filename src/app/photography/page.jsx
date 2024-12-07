@@ -72,7 +72,7 @@ export default function Photography() {
             ))}
           </div>
 
-          {/* Commercial Photography grid */}
+          {/* Photography Grid */}
           <div className="py-[1%]">
             <div className="gap-8 columns-1 md:columns-3">
               {visibleData.map((item) => (
