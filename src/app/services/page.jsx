@@ -29,6 +29,10 @@ export default function Services() {
     router.push(`/works?category=${category}`);
   };
 
+  const navigateToPhotographyPage = (category) => {
+    router.push(`/photography?category=${category}`);
+  };
+
   const scrollToTop = () => {
     const scrollStep = -window.scrollY / (500 / 15);
     const scrollInterval = setInterval(() => {
@@ -186,9 +190,9 @@ export default function Services() {
               <h2 className="text-4xl font-bold mb-10 md:mb-20 text-center">Our Services</h2>
               <div className="flex flex-col md:flex-row items-center justify-center gap-10 lg:gap-16">
                 <div className="relative flex flex-col items-center group">
-                  <a href="/works" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300 cursor-pointer">
+                  <Link href="/works" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
                     <PiVideoBold className="text-3xl" />
-                  </a>
+                  </Link>
                   <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Video Production</div>
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-48 bg-white shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out z-10 hidden group-hover:block">
                     <ul>
@@ -215,10 +219,23 @@ export default function Services() {
                 </div>
 
                 <div className="relative flex flex-col items-center group">
-                  <Link href="/works" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
+                  <Link href="/photography" className="flex items-center justify-center w-16 h-16 bg-primary-grey rounded-full mb-2 group-hover:bg-primary-red group-hover:text-primary-white transition-colors duration-300">
                     <IoCameraOutline className="text-3xl" />
                   </Link>
                   <div className="text-center md:mt-2 md:text-lg lg:text-2xl font-medium">Photography</div>
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-48 bg-white shadow-lg rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out z-10 hidden group-hover:block">
+                    <ul>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToPhotographyPage("Commercial")}>
+                        Commercial
+                      </li>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToPhotographyPage("Beautycare")}>
+                        Beautycare
+                      </li>
+                      <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:cursor-pointer" onClick={() => navigateToPhotographyPage("Corporate")}>
+                        Corporate
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
                 <div className="relative flex flex-col items-center group">
