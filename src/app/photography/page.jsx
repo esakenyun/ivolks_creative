@@ -79,7 +79,7 @@ export default function Photography() {
                 <div key={item.id} className="mb-4">
                   <div className="group relative">
                     {/* Image */}
-                    <Image src={item.imageUrl} alt={item.name} className="object-contain w-full h-full transition-opacity" width={1000} height={1000} priority />
+                    <Image src={item.imageUrl} alt={item.name} className="object-contain w-full h-full transition-opacity" width={1000} height={1000} priority laz />
                     {/* Semi-transparent overlay on hover */}
                     <div className="absolute inset-0 bg-gray-800/40 opacity-0 group-hover:opacity-100 transition-all"></div>
                     {/* Title in the bottom-left corner */}
