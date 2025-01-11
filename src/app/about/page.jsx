@@ -9,7 +9,20 @@ import { FaArrowUp } from "react-icons/fa6";
 export default function AboutPage() {
   const [scrolling, setScrolling] = useState(false);
   const [visibleCountTab, setVisibleCountTab] = useState(4);
-  const [visibleCountMobile, setVisibleCountMobile] = useState(3);
+  const [visibleCountMobile, setVisibleCountMobile] = useState(4);
+
+  const CardDescription = ({ person }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    return (
+      <div className="text-center mt-2">
+        <p className={`font-semibold ${isExpanded ? "" : "line-clamp-1"} cursor-pointer`} onClick={() => setIsExpanded(!isExpanded)}>
+          {person.name}
+        </p>
+        <p>{person.position}</p>
+      </div>
+    );
+  };
 
   const founders = [
     {
@@ -142,7 +155,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Our Teams iVolks Section */}
+          {/* Our Leaders iVolks Section */}
           <div className="py-[10%] px-[5%]">
             <h2 className="text-3xl font-bold mb-4">iVOLKS Leader</h2>
             {/* Dekstop Section */}
@@ -204,16 +217,17 @@ export default function AboutPage() {
             <div className="md:hidden">
               <div className="pt-[2%]">
                 <div className="overflow-x-auto w-full py-4">
-                  <div className="grid grid-cols-1 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     {founders.map((person, index) => (
                       <div key={index} className="flex-shrink-0 w-full select-none">
                         <a href={person.instagramUrl} target="_blank">
-                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
+                          <Image src={person.imageUrl} alt={person.name} className="w-full aspect-square object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
                         </a>
-                        <div className="text-center mt-2">
-                          <p className="font-semibold">{person.name}</p>
+                        <CardDescription person={person} />
+                        {/* <div className="text-center mt-2">
+                          <p className="font-semibold line-clamp-1">{person.name}</p>
                           <p>{person.position}</p>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
@@ -283,16 +297,17 @@ export default function AboutPage() {
             <div className="md:hidden">
               <div className="pt-[2%]">
                 <div className="overflow-x-auto w-full py-4">
-                  <div className="grid grid-cols-1 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     {teams.map((person, index) => (
                       <div key={index} className="flex-shrink-0 w-full select-none">
                         <a href={person.instagramUrl} target="_blank">
-                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
+                          <Image src={person.imageUrl} alt={person.name} className="w-full aspect-square object-cover rounded-lg hover:grayscale" width={300} height={300} quality={100} priority />
                         </a>
-                        <div className="text-center mt-2">
+                        <CardDescription person={person} />
+                        {/* <div className="text-center mt-2">
                           <p className="font-semibold">{person.name}</p>
                           <p>{person.position}</p>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
@@ -437,16 +452,17 @@ export default function AboutPage() {
             <div className=" md:hidden">
               <div className="pt-[2%]">
                 <div className="overflow-x-auto w-full py-4">
-                  <div className="grid grid-cols-1 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     {internships.slice(0, visibleCountMobile).map((person, index) => (
                       <div key={index} className="flex-shrink-0 w-full sm:w-72 md:w-72 lg:w-72 select-none">
                         <a href={person.instagramUrl} target="_blank">
-                          <Image src={person.imageUrl} alt={person.name} className="w-full h-96 md:h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          <Image src={person.imageUrl} alt={person.name} className="w-full aspect-square object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
                         </a>
-                        <div className="text-center mt-2">
-                          <p className="font-semibold">{person.name}</p>
+                        <CardDescription person={person} />
+                        {/* <div className="text-center mt-2">
+                          <p className="font-semibold line-clamp-1">{person.name}</p>
                           <p>{person.position}</p>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
