@@ -108,7 +108,7 @@ export default function AboutPage() {
     {
       name: "Ahmad Fathin",
       imageUrl: "/profile/internship/Vol2/Ahmad Fathin.jpg",
-      instagramUrl: "https://www.instagram.com/",
+      instagramUrl: "https://www.instagram.com/ahmdft._/",
     },
     {
       name: "Alia Eka Putri",
@@ -118,7 +118,7 @@ export default function AboutPage() {
     {
       name: "Firheyzi Resca Dirgantoro",
       imageUrl: "/profile/internship/Vol2/Firheyzi Resca Dirgantoro.jpg",
-      instagramUrl: "https://www.instagram.com/",
+      instagramUrl: "https://www.instagram.com/⁠firheyzi/",
     },
     {
       name: "Jonathan Mepal Jeffry Napitulu",
@@ -128,7 +128,7 @@ export default function AboutPage() {
     {
       name: "Kezia Mageline",
       imageUrl: "/profile/internship/Vol2/Kezia Mageline.jpg",
-      instagramUrl: "https://www.instagram.com/)",
+      instagramUrl: "https://www.instagram.com/kmageline/)",
     },
     {
       name: "Muhammad Rifqi Prayoga Rusli",
@@ -143,12 +143,12 @@ export default function AboutPage() {
     {
       name: "Mohamad Fajri Alviansyah",
       imageUrl: "/profile/internship/Vol2/Mohamad Fajri Alviansyah_.jpg",
-      instagramUrl: "https://www.instagram.com/",
+      instagramUrl: "https://www.instagram.com/Fajrialvn_/",
     },
     {
       name: "Rizki Azkia",
       imageUrl: "/profile/internship/Vol2/Rizki Azkia.jpg",
-      instagramUrl: "https://www.instagram.com/",
+      instagramUrl: "https://www.instagram.com/rzkizkia/",
     },
     {
       name: "Sitatun Attoyibah",
@@ -163,12 +163,12 @@ export default function AboutPage() {
     {
       name: "Theodora Zaneta Putri",
       imageUrl: "/profile/internship/Vol2/Theodora Zaneta Putri.jpg",
-      instagramUrl: "https://www.instagram.com/",
+      instagramUrl: "https://www.instagram.com/tzanetaptr/",
     },
     {
       name: "Zefanya Eleora ferdian",
       imageUrl: "/profile/internship/Vol2/Zefanya Eleora ferdian.jpg",
-      instagramUrl: "https://www.instagram.com/",
+      instagramUrl: "https://www.instagram.com/zefanyaeleora_/",
     },
     {
       name: "Zidan Verdian Windoe",
