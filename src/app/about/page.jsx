@@ -177,11 +177,19 @@ export default function AboutPage() {
     },
   ];
 
-  const loadMoreTab = () => {
+  const loadMoreTabV1 = () => {
     setVisibleCountTab((prevCount) => prevCount + 4);
   };
 
-  const loadMoreMobile = () => {
+  const loadMoreMobileV1 = () => {
+    setVisibleCountMobile((prevCount) => prevCount + 4);
+  };
+
+  const loadMoreTabV2 = () => {
+    setVisibleCountTab((prevCount) => prevCount + 4);
+  };
+
+  const loadMoreMobileV2 = () => {
     setVisibleCountMobile((prevCount) => prevCount + 4);
   };
 
@@ -540,7 +548,7 @@ export default function AboutPage() {
             {visibleCountTab < internships_vol_1.length && (
               <div className="hidden md:block lg:hidden">
                 <div className="flex justify-center py-10">
-                  <button onClick={loadMoreTab} className="px-4 py-2 text-white bg-primary-red rounded-md">
+                  <button onClick={loadMoreTabV1} className="px-4 py-2 text-white bg-primary-red rounded-md">
                     Load More
                   </button>
                 </div>
@@ -571,7 +579,7 @@ export default function AboutPage() {
             {visibleCountMobile < internships_vol_1.length && (
               <div className="md:hidden">
                 <div className="flex justify-center py-10">
-                  <button onClick={loadMoreMobile} className="px-4 py-2 text-white bg-primary-red rounded-md">
+                  <button onClick={loadMoreMobileV2} className="px-4 py-2 text-white bg-primary-red rounded-md">
                     Load More
                   </button>
                 </div>
@@ -730,7 +738,7 @@ export default function AboutPage() {
             {visibleCountTab < internships_vol_2.length && (
               <div className="hidden md:block lg:hidden">
                 <div className="flex justify-center py-10">
-                  <button onClick={loadMoreTab} className="px-4 py-2 text-white bg-primary-red rounded-md">
+                  <button onClick={loadMoreTabV2} className="px-4 py-2 text-white bg-primary-red rounded-md">
                     Load More
                   </button>
                 </div>
@@ -761,7 +769,7 @@ export default function AboutPage() {
             {visibleCountMobile < internships_vol_2.length && (
               <div className="md:hidden">
                 <div className="flex justify-center py-10">
-                  <button onClick={loadMoreMobile} className="px-4 py-2 text-white bg-primary-red rounded-md">
+                  <button onClick={loadMoreMobileV2} className="px-4 py-2 text-white bg-primary-red rounded-md">
                     Load More
                   </button>
                 </div>
