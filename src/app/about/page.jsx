@@ -99,7 +99,7 @@ export default function AboutPage() {
     },
     {
       name: "Marsya Haliza Syafei",
-      imageUrl: "/profile/internship/Vol2/MARSYA HALIZA SYAFEI.jpg",
+      imageUrl: "/profile/internship/Vol2/Marsya Haliza Syafei.jpg",
       instagramUrl: "https://www.instagram.com/marsyahlzsf/",
     },
     {
@@ -114,7 +114,7 @@ export default function AboutPage() {
     },
     {
       name: "Sitatun Attoyibah",
-      imageUrl: "/profile/internship/Vol2/SITATUN ATTOYIBAH.jpg",
+      imageUrl: "/profile/internship/Vol2/Sitatun Attoyibah.jpg",
       instagramUrl: "https://www.instagram.com/ssttorii/",
     },
     {
