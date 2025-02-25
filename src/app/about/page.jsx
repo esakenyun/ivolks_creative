@@ -56,7 +56,7 @@ export default function AboutPage() {
       name: "Asep Lukmanul",
       position: "Visual Supervisor",
       imageUrl: "/profile/team/Asep Lukmanul.JPG",
-      instagramUrl: "https://www.instagram.com/xeesixee/",
+      instagramUrl: "https://www.instagram.com/eaudesave",
     },
     {
       name: "Jokodin Sukowi",
@@ -68,38 +68,73 @@ export default function AboutPage() {
 
   const internships = [
     {
+      name: "Ahmad Fathin",
+      imageUrl: "/profile/internship/Vol2/Ahmad Fathin.jpg",
+      instagramUrl: "https://www.instagram.com/",
+    },
+    {
       name: "Alia Eka Putri",
-      imageUrl: "/profile/internship/Vol1/ALIA EKA PUTRI.jpg",
+      imageUrl: "/profile/internship/Vol2/Alia Eka Putri.jpg",
       instagramUrl: "https://www.instagram.com/2992pm/",
     },
     {
+      name: "Firheyzi Resca Dirgantoro",
+      imageUrl: "/profile/internship/Vol2/Firheyzi Resca Dirgantoro.jpg",
+      instagramUrl: "https://www.instagram.com/",
+    },
+    {
       name: "Jonathan Mepal Jeffry Napitulu",
-      imageUrl: "/profile/internship/Vol1/Jonathan Mepal Jefry Napitupulu.jpg",
+      imageUrl: "/profile/internship/Vol2/Jonathan Mepal Jeffry Napitupulu.jpg",
       instagramUrl: "https://www.instagram.com/jonathan_napitupulu_/",
     },
     {
+      name: "Kezia Mageline",
+      imageUrl: "/profile/internship/Vol2/Kezia Mageline.jpg",
+      instagramUrl: "https://www.instagram.com/)",
+    },
+    {
       name: "Muhammad Rifqi Prayoga Rusli",
-      imageUrl: "/profile/internship/Vol1/Muh Rifqi Prayoga Rusli .jpg",
+      imageUrl: "/profile/internship/Vol2/Rifqi Prayoga.jpg",
       instagramUrl: "https://www.instagram.com/rifqiyoga_/)",
     },
     {
       name: "Marsya Haliza Syafei",
-      imageUrl: "/profile/internship/Vol1/MARSYA HALIZA SYAFEI.jpg",
+      imageUrl: "/profile/internship/Vol2/MARSYA HALIZA SYAFEI.jpg",
       instagramUrl: "https://www.instagram.com/marsyahlzsf/",
     },
     {
+      name: "Mohamad Fajri Alviansyah",
+      imageUrl: "/profile/internship/Vol2/Mohamad Fajri Alviansyah_.jpg",
+      instagramUrl: "https://www.instagram.com/",
+    },
+    {
+      name: "Rizki Azkia",
+      imageUrl: "/profile/internship/Vol2/Rizki Azkia.jpg",
+      instagramUrl: "https://www.instagram.com/",
+    },
+    {
       name: "Sitatun Attoyibah",
-      imageUrl: "/profile/internship/Vol1/SITATUN ATTOYIBAH.jpg",
+      imageUrl: "/profile/internship/Vol2/SITATUN ATTOYIBAH.jpg",
       instagramUrl: "https://www.instagram.com/ssttorii/",
     },
     {
       name: "Tharsius Celviano Ully",
-      imageUrl: "/profile/internship/Vol1/Tharsius Celviano Ully.jpg",
+      imageUrl: "/profile/internship/Vol2/Tharsius Celviano Ully.jpg",
       instagramUrl: "https://www.instagram.com/tharsiuscelviano29/",
     },
     {
+      name: "Theodora Zaneta Putri",
+      imageUrl: "/profile/internship/Vol2/Theodora Zaneta Putri.jpg",
+      instagramUrl: "https://www.instagram.com/",
+    },
+    {
+      name: "Zefanya Eleora ferdian",
+      imageUrl: "/profile/internship/Vol2/Zefanya Eleora ferdian.jpg",
+      instagramUrl: "https://www.instagram.com/",
+    },
+    {
       name: "Zidan Verdian Windoe",
-      imageUrl: "/profile/internship/Vol1/Zidan Verdian Windoe.jpg",
+      imageUrl: "/profile/internship/Vol2/Zidan Verdian Windoe.jpg",
       instagramUrl: "https://www.instagram.com/zidanwindoe/",
     },
   ];
@@ -317,7 +352,7 @@ export default function AboutPage() {
           </div>
 
           <div className="py-[4%] px-[5%]">
-            <h2 className="text-3xl font-bold mb-4">iVOLKS Internship Vol.1</h2>
+            <h2 className="text-3xl font-bold mb-4">iVOLKS Internship Vol.2</h2>
             {/* Dekstop Section*/}
             <div className="hidden tablet-landscape:hidden lg:block">
               <div className="pt-[2%]">
@@ -337,7 +372,33 @@ export default function AboutPage() {
                       ))}
                     </div>
                     <div className="flex w-full space-x-10">
-                      {internships.slice(4, 7).map((person, index) => (
+                      {internships.slice(4, 8).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships.slice(8, 12).map((person, index) => (
+                        <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
+                          <a href={person.instagramUrl} target="_blank">
+                            <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
+                          </a>
+                          <div className="text-center mt-2">
+                            <p className="font-semibold">{person.name}</p>
+                            <p>{person.position}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex w-full space-x-10">
+                      {internships.slice(12, 16).map((person, index) => (
                         <div key={index} className="flex-shrink-0 w-full sm:w-72 lg:w-72 select-none">
                           <a href={person.instagramUrl} target="_blank">
                             <Image src={person.imageUrl} alt={person.name} className="w-full h-72 object-cover rounded-lg hover:grayscale" width={300} height={300} priority />
