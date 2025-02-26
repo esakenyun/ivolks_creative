@@ -118,7 +118,7 @@ export default function AboutPage() {
     {
       name: "Firheyzi Resca Dirgantoro",
       imageUrl: "/profile/internship/Vol2/Firheyzi Resca Dirgantoro.jpg",
-      instagramUrl: "https://www.instagram.com/⁠firheyzi/",
+      instagramUrl: "https://www.instagram.com/firheyzi/",
     },
     {
       name: "Jonathan Mepal Jeffry Napitulu",
